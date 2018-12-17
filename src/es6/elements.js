@@ -1,3 +1,3 @@
 const elements = {};
 
-console.log('Webpack On!!!');
+console.log('Webpack On!!');
