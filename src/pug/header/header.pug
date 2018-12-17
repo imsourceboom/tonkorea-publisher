@@ -1,0 +1,10 @@
+header
+    div.container
+        figure
+            img(src="http://www.marathonartists.com/wp-content/uploads/2017/09/dummy-logo.png")
+        nav
+            ul
+                -   var menu = ['menu1', 'menu2', 'menu3']
+                each m in menu
+                    li
+                        a(href="#")= m

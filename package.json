@@ -1,0 +1,34 @@
+{
+  "name": "modern-publisher",
+  "version": "1.0.0",
+  "description": "modern tool for web publisher",
+  "main": "index.js",
+  "author": "imsourceboom",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "gulp",
+    "dev": "gulp",
+    "clean": "gulp clean",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-util": "^3.0.8",
+    "imagesloaded": "^4.1.4",
+    "reset-css": "^4.0.1",
+    "run-sequence": "^2.2.1"
+  }
+}

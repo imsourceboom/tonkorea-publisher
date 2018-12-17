@@ -1,0 +1,17 @@
+main {
+    position: relative;
+    flex: 1;
+
+    h1 {
+        @include centered;
+        font-family: 'Oswald';
+        font-weight: 500;
+        font-size: 80px;
+    }
+
+    div {
+        height: 450px;
+        background-color: blanchedalmond;
+        margin: 1rem;
+    }
+}
