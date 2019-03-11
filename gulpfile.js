@@ -16,25 +16,25 @@ const webpack = require('webpack-stream');
 const conf = {
     paths: {
         src: './src',
-        dist: './dist',
+        build: './build',
         js: {
             src: './src/es6/**/*.js',
-            dist: './dist/js',
+            build: './build/js',
             index: './src/es6/index.js'
         },
         sass: {
             src: './src/sass/**/*.scss',
-            dist: './dist/css'
+            build: './build/css'
         },
         pug: {
             index: './src/pug/index.pug',
             pages: './src/pug/pages/*.pug',
-            distIndex: './dist',
-            distPages: './dist/html'
+            buildIndex: './build',
+            buildPages: './build/html'
         },
         html: {
             src: './src/pug/**/*.html',
-            dist: './dist/html',
+            build: './build/html',
             index: './index.html'
         }
     },
@@ -74,12 +74,12 @@ gulp.task('pug', [], function buildHTML() {
     let indexPug = gulp
         .src(conf.paths.pug.index)
         .pipe(pug({ pretty: true }).on('error', pugErrHandler))
-        .pipe(gulp.dest(conf.paths.pug.distIndex))
+        .pipe(gulp.dest(conf.paths.pug.buildIndex))
         .pipe(browserSync.reload({ stream: true }));
     let pagesPug = gulp
         .src(conf.paths.pug.pages)
         .pipe(pug({ pretty: true }).on('error', pugErrHandler))
-        .pipe(gulp.dest(conf.paths.pug.distPages))
+        .pipe(gulp.dest(conf.paths.pug.buildPages))
         .pipe(browserSync.reload({ stream: true }));
 
     return merge(indexPug, pagesPug);
@@ -88,7 +88,7 @@ gulp.task('pug', [], function buildHTML() {
 gulp.task('html', [], function() {
     return gulp
         .src(conf.paths.html.src)
-        .pipe(gulp.dest(conf.paths.html.dist))
+        .pipe(gulp.dest(conf.paths.html.build))
         .pipe(browserSync.reload({ stream: true }));
 });
 
@@ -99,7 +99,7 @@ gulp.task('sass', [], function() {
         .pipe(sass(conf.sass.process).on('error', sassErrHandler))
         .pipe(autoprefixer(conf.sass.autoprefixer))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(conf.paths.sass.dist))
+        .pipe(gulp.dest(conf.paths.sass.build))
         .pipe(browserSync.reload({ stream: true }));
 });
 
@@ -131,15 +131,15 @@ gulp.task('js', [], function buildHTML() {
                 mode: 'production'
             })
         )
-        .pipe(gulp.dest(conf.paths.js.dist))
+        .pipe(gulp.dest(conf.paths.js.build))
         .pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task('clean', function() {
-    del(['./dist/index.html']);
-    del(['./dist/html/**/*']);
-    del(['./dist/css/**/*']);
-    del(['./dist/js/**/*']);
+    del(['./build/index.html']);
+    del(['./build/html/**/*']);
+    del(['./build/css/**/*']);
+    del(['./build/js/**/*']);
 });
 
 /**
@@ -150,7 +150,7 @@ gulp.task('serve', function() {
         // startPath: '/html/index.html',
         startPath: conf.paths.html.index,
         server: {
-            baseDir: `${conf.paths.dist}`,
+            baseDir: `${conf.paths.build}`,
             directory: true
         },
         port: 4000,
