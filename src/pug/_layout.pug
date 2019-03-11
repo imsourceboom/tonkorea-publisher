@@ -11,12 +11,13 @@ html(lang="ko")
 
 body
 
-    include header/header
+    include layout/header
 
     main
+        include components/search
         block main
 
-    include footer/footer
+    include layout/footer
 
     block javascript
         script(src="/js/app.js")

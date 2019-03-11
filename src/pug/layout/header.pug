@@ -1,0 +1,11 @@
+header
+    div.container
+        figure
+            a(href="/index.html")
+                img(src="/assets/sample-logo.png")
+        nav
+            ul
+                -   var menu = ['about', 'portfolio', 'contact']
+                each m in menu
+                    li
+                        a(href=`/html/${m}.html`)= m

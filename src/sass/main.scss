@@ -8,3 +8,9 @@
 @import 'layout/header',
 'layout/main',
 'layout/footer';
+
+@import 'pages/about',
+'pages/portfolio',
+'pages/contact';
+
+@import 'components/search';

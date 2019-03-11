@@ -2,6 +2,7 @@
 
 const path = require('path');
 const gulp = require('gulp');
+const merge = require('merge-stream');
 const browserSync = require('browser-sync');
 const gutil = require('gulp-util');
 const sass = require('gulp-sass');
@@ -26,13 +27,15 @@ const conf = {
             dist: './dist/css'
         },
         pug: {
-            src: './src/pug/**/*.pug',
-            dist: './dist/html'
+            index: './src/pug/index.pug',
+            pages: './src/pug/pages/*.pug',
+            distIndex: './dist',
+            distPages: './dist/html'
         },
         html: {
             src: './src/pug/**/*.html',
             dist: './dist/html',
-            index: '/html/index.html'
+            index: './index.html'
         }
     },
     errorHandler: function(title) {
@@ -68,11 +71,18 @@ gulp.task('run_source', function() {
 
 gulp.task('pug', [], function buildHTML() {
     const pugErrHandler = conf.errorHandler('pug');
-    return gulp
-        .src(conf.paths.pug.src)
+    let indexPug = gulp
+        .src(conf.paths.pug.index)
         .pipe(pug({ pretty: true }).on('error', pugErrHandler))
-        .pipe(gulp.dest(conf.paths.pug.dist))
+        .pipe(gulp.dest(conf.paths.pug.distIndex))
         .pipe(browserSync.reload({ stream: true }));
+    let pagesPug = gulp
+        .src(conf.paths.pug.pages)
+        .pipe(pug({ pretty: true }).on('error', pugErrHandler))
+        .pipe(gulp.dest(conf.paths.pug.distPages))
+        .pipe(browserSync.reload({ stream: true }));
+
+    return merge(indexPug, pagesPug);
 });
 
 gulp.task('html', [], function() {
@@ -126,8 +136,10 @@ gulp.task('js', [], function buildHTML() {
 });
 
 gulp.task('clean', function() {
-    del(['./dist/assets/**/*']);
-    del(['./dist/page/**/*']);
+    del(['./dist/index.html']);
+    del(['./dist/html/**/*']);
+    del(['./dist/css/**/*']);
+    del(['./dist/js/**/*']);
 });
 
 /**
