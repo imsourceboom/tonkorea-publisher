@@ -1,26 +1,29 @@
 doctype html
-html(lang="ko")
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
-    meta(name="title", content="For Publiser")
-    meta(name="description", content="Modern Publilser Best Tool")
-    meta(name="keywords", content="publisher, gulp, pug, sass, es6, javascript")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="format-detaction", content="telephone=no, address=no, email=no")
-    meta(name="apple-mobile-web-app-capable", content="yes")
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+        meta(name="title", content="Koinvestor")
+        meta(name="description", content="korea investor venture capital")
+        meta(name="keywords", content="koinvestor, blockchain, korea investor, korea, investor, vc, venture capital")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="format-detaction", content="telephone=no, address=no, email=no")
+        meta(name="apple-mobile-web-app-capable", content="yes")
 
-    title Modern Publisher
-    link(rel="stylesheet", href="/css/main.css")
+        title Modern Publisher
+        link(rel="manifest", href="/manifest.json")
+        link(rel="stylesheet", href="/css/main.css")
 
-body
+    body
 
-    include layout/header
+        include layout/intro
 
-    main
-        include components/search
-        block main
+        //- include layout/header
 
-    include layout/footer
+        main
+            block main
 
-    block javascript
-        script(src="/js/app.js")
+        include layout/footer
+
+        block javascript
+            script(src="/js/app.js")

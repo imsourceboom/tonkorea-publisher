@@ -1,18 +1,43 @@
 main {
     position: relative;
-    flex: 1;
-    width: 100%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 1);
 
-    h1 {
-        @include centered;
-        font-family: 'Oswald';
-        font-weight: 500;
-        font-size: 70px;
-    }
+    @import './header';
 
-    div {
-        height: 450px;
-        background-color: blanchedalmond;
-        margin: 1rem;
+    &>section {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 1024px;
+        min-height: 100vh;
+        // margin-top: -50px;
+        margin: -50px auto 0;
+
+        // &:last-child {
+        //     min-height: initial;
+
+        //     & article.container {
+        //         display: flex;
+        //         justify-content: center;
+        //         padding: 5rem 0 10rem;
+        //     }
+        // }
+
+        @media(min-width: 768px) {
+            margin-top: -60px;
+        }
+
+        &>article.container {
+            position: relative;
+            padding: 0 1rem 1rem;
+
+            & h1 {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
     }
 }

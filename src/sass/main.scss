@@ -5,13 +5,16 @@
 'base/typography',
 'base/base';
 
-@import 'layout/header',
+@import 'library/hamburger';
+
+@import 'layout/intro',
+// 'layout/header',
 'layout/main',
 'layout/footer';
 
-@import 'pages/about',
-'pages/portfolio',
-'pages/contents',
-'pages/newpage';
+@import 'section/about',
+'section/portfolio',
+'section/contents',
+'section/newpage';
 
-@import 'components/search';
+@import 'components/cube';
