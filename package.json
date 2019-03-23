@@ -31,7 +31,6 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "cross-browser-polyfill": "^1.0.4",
     "reset-css": "^4.0.1",
     "scrollreveal": "^4.0.5",
     "smooth-scroll": "^16.0.0",

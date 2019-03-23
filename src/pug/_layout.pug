@@ -3,9 +3,9 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
-        meta(name="title", content="Koinvestor")
-        meta(name="description", content="korea investor venture capital")
-        meta(name="keywords", content="koinvestor, blockchain, korea investor, korea, investor, vc, venture capital")
+        meta(name="title", content="Modern Publisher")
+        meta(name="description", content="for Modern Publisher")
+        meta(name="keywords", content="gulp, webpack, publisher, sass, scss, pug, es6, babel ")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="format-detaction", content="telephone=no, address=no, email=no")
         meta(name="apple-mobile-web-app-capable", content="yes")
@@ -13,6 +13,9 @@ html(lang="en")
         title Modern Publisher
         link(rel="manifest", href="/manifest.json")
         link(rel="stylesheet", href="/css/main.css")
+
+        script(src="https://polyfill.io/v3/polyfill.min.js?flags=gated" async defer) 
+        script(src="/js/app.js" defer)
 
     body
 
@@ -25,5 +28,4 @@ html(lang="en")
 
         include layout/footer
 
-        block javascript
-            script(src="/js/app.js")
+        
