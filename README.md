@@ -1,8 +1,7 @@
 # for Modern Publisher
 
-## Development Tool
-
-## Basic Layout
+-   Development Tool
+-   Basic Layout
 
 ### example
 
