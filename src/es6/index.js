@@ -1,4 +1,3 @@
-// import './polyfill';
 import './sticky';
 // import './typed';
 import './smoothscroll';
