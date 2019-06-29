@@ -13,7 +13,7 @@
 ## Install
 
 ```sh
-yarn install
+git clone https://github.com/imsourceboom/modern-pubilsher.git [project name]
 ```
 
 ## Usage
@@ -32,10 +32,10 @@ yarn run test
 
 👤 **imsourceboom (ecmascript.developer@gmail.com)**
 
-
 ## Show your support
 
 Give a ⭐️ if this project helped you!
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
