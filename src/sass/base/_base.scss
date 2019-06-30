@@ -1,52 +1,71 @@
 html {
-    height: 100%;
-    // scroll-behavior: smooth;
+    scroll-behavior: smooth;
     -ms-overflow-style: none;
+    /* Microsoft scrollbar none */
+
+    &,
+    & * {
+        scrollbar-width: none;
+        /* window Firefox scrollbar none */
+    }
 }
 
 ::-webkit-scrollbar {
     display: none;
+    /* Chrome, Safari scrollbar none */
 }
 
 body {
-    width: 100%;
-    min-height: 100%;
-    color: rgba(0, 0, 0, 0.65);
-    background-color: rgba(0, 0, 0, .08);
-}
 
-* {
-    outline: none;
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-label {
-    color: rgba(0, 0, 0, .54);
-}
-
-input {
-    &::placeholder {
-        /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: rgba(112, 112, 112, 0.4);
-        opacity: 1;
-        font-size: .85rem;
-        /* Firefox */
+    * {
+        margin: 0;
+        padding: 0;
+        outline: none;
+        box-sizing: border-box;
     }
 
-    &:-ms-input-placeholder {
-        /* Internet Explorer 10-11 */
-        color: rgba(112, 112, 112, 0.4);
-        font-size: .85rem;
+    a {
+        text-decoration: none;
+        color: inherit;
     }
 
-    &::-ms-input-placeholder {
-        /* Microsoft Edge */
-        color: rgba(112, 112, 112, 0.4);
-        font-size: .85rem;
+    ul,
+    ol {
+        list-style-type: none;
+
+        li:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    img {
+        display: block;
+    }
+
+    label {
+        color: rgba(0, 0, 0, .54);
+    }
+
+    input,
+    textarea {
+        &::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: rgba(112, 112, 112, 0.4);
+            opacity: 1;
+            font-size: .9rem;
+            /* Firefox */
+        }
+
+        &:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: rgba(112, 112, 112, 0.4);
+            font-size: .9rem;
+        }
+
+        &::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: rgba(112, 112, 112, 0.4);
+            font-size: .9rem;
+        }
     }
 }
