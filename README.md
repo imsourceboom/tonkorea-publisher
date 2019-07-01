@@ -1,7 +1,7 @@
 <h1 align="center">Welcome to modern publisher 👋</h1>
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fcab8PZ%2FbtqwsdPfkGb%2FQJaKFbE8KlCxiSi4Vl7070%2Fimg.jpg"/>
 <p>
-  <img src="https://img.shields.io/badge/version-1.1.5-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/imsourceboom/modern-pubilsher/blob/master/README.md">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
   </a>
