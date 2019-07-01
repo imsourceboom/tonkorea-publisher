@@ -14,7 +14,7 @@ const sassConfig = {
     },
     autoprefixer: {
         // https://github.com/ai/browserslist
-        browsers: ['last 2 versions', '> 1% in KR', 'ie 8-11'],
+        // browsers: ['last 2 versions', '> 1% in KR', 'ie 8-11'],
         cascade: false,
         grid: true
     }
