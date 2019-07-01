@@ -27,7 +27,7 @@ const sassSet = () => {
             .pipe(sourcemaps.init())
             .pipe(sass(sassConfig.process).on('error', sassErrHandler))
             .pipe(autoprefixer(sassConfig.autoprefixer))
-            .pipe(sourcemaps.write())
+            .pipe(sourcemaps.write('.'))
             .pipe(dest(paths.sass.build))
             .pipe(
                 reload({
