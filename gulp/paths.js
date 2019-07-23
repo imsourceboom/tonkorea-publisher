@@ -22,5 +22,9 @@ export default {
         src: './src/pug/**/*.html',
         build: './build/html',
         index: './index.html'
+    },
+    image: {
+        src: './src/assets/images',
+        build: './build/assets/images'
     }
 };

@@ -55,8 +55,12 @@ npm start
     -   entry: **src/script/index.js**
     -   output: **build/js/app.js**
 
--   _image나 여타 resource들은 build/assets/ 에 두세요._
+-   image
 
+    -   entry: **src/assets/images**
+    -   output: **build/assets/images**
+
+-   _image 파일들을 위 image entry의 위치에 추가하시면 자동 감지 및 압축됩니다._
 -   _css 파일은 sass 설정으로 autoprefixer + compressed 가 적용되어 빌드됩니다._
 -   _js 파일은 webpack의 production mode 로 압축되어 빌드됩니다._
 
