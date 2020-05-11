@@ -32,6 +32,11 @@ header {
       }
     }
 
+    .box {
+      display: flex;
+      align-items: center;
+    }
+
     nav.desktop {
       display: none;
 
@@ -86,6 +91,7 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      margin-left: 25px;
       cursor: pointer;
 
       @media (min-width: 1024px) {
@@ -171,6 +177,39 @@ header {
         li {
           margin-bottom: 40px;
           opacity: 0.5;
+
+          &:first-child {
+            padding-bottom: 7px;
+            margin-right: 40px;
+            border-bottom: 1px solid #aaa;
+            opacity: 1;
+          }
+
+          .sign-in {
+            color: #0088cc;
+
+            a {
+              &:first-child {
+                margin-right: 40px;
+              }
+            }
+          }
+
+          .sign-out {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+              color: rgb(0, 0, 0);
+
+              &:last-child {
+                display: inline-block;
+                padding: 3px 15px;
+                border: 1px solid #aaa;
+              }
+            }
+          }
 
           &.active {
             opacity: 1;

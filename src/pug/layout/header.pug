@@ -30,29 +30,39 @@ header
         figure
             a(href="/index.html")
                 img(src="/assets/images/logos/ton-symbol.svg" alt="Logo")
-        nav.desktop
+        .box
             include ../components/languageSelect
-            // 로그인 했을 시 sign-out || 로그아웃 했을 시 sign-in
-            .sign-in
-                a(href="/html/log-in.html") Login
-                a(href="/html/join.html") Join
-            // .sign-out
-            //     a(href="/html/log-in.html") Username
-            //     a(href="/html/join.html") Logout
-            // 해당 페이지 li 태그에 active 클래스 추가
-            ul
-                each m in menus
-                    li(class=`active`)
-                        a(href=`/html/${m.path}.html`)= m.name
-        .hamburger
-            div
-            div
-            div
-        .mobile-nav-back
-        .mobile-nav
-            div.close
-            // 해당 페이지 li 태그에 active 클래스 추가
-            ul
-                each m in menus
-                    li(class=`active`)
-                        a(href=`/html/${m.path}.html`)= m.name
+            nav.desktop
+                // 로그인 했을 시 sign-out || 로그아웃 했을 시 sign-in
+                .sign-in
+                    a(href="/html/log-in.html") Login
+                    a(href="/html/join.html") Join
+                // .sign-out
+                //     a(href="/html/log-in.html") Username
+                //     a(href="/html/join.html") Logout
+                // 해당 페이지 li 태그에 active 클래스 추가
+                ul
+                    each m in menus
+                        li(class=`active`)
+                            a(href=`/html/${m.path}.html`)= m.name
+            .hamburger
+                div
+                div
+                div
+            .mobile-nav-back
+            .mobile-nav
+                div.close
+                // 해당 페이지 li 태그에 active 클래스 추가
+                ul
+                    li
+                        // 로그인 했을 시 sign-out || 로그아웃 했을 시 sign-in
+                        .sign-in
+                            a(href="/html/log-in.html") Login
+                            a(href="/html/join.html") Join
+                        // .sign-out
+                        //     a(href="/html/log-in.html") Username
+                        //     a(href="/html/join.html") Logout
+
+                    each m in menus
+                        li(class=`active`)
+                            a(href=`/html/${m.path}.html`)= m.name
