@@ -1,47 +1,50 @@
+-
+    var menus = [
+        {
+            name: '참고자료',
+            path: 'resources'
+        }, 
+        {
+            name: '참여',
+            path: 'participate'
+        }, 
+        {
+            name: '멤버십',
+            path: 'members'
+        }, 
+        {
+            name: '커뮤니티',
+            path: 'coummunity'
+        }, 
+        {
+            name: '뉴스', 
+            path: 'news'
+        },
+        {
+            name: '문의/연락처',
+            path: 'contact'
+        }
+    ]
 header
-    div.container
+    .wrapper
         figure
-            a(href="#")
-                img(src="/assets/images/logo.png" alt="Logo example")
-        nav
+            a(href="/index.html")
+                img(src="/assets/images/logos/ton-symbol.svg" alt="Logo")
+        nav.desktop
+            // 해당 페이지 li 태그에 active 클래스 추가
             ul
-                -
-                    var menu = [
-                        {
-                            name:'ABOUT',
-                            id: 'about',
-                            class: 'delay-100'
-                        },
-                        {
-                            name: 'SERVICES',
-                            id:'services',
-                            class: 'delay-200'
-                        },
-                        {
-                            name:'TEAM',
-                            id:'team',
-                            class: 'delay-300'
-                            
-                        },
-                        {
-                            name:'PORTFOLIO',
-                            id:'portfolio',
-                            class: 'delay-400'
-                        },
-                        {
-                            name:'PARTNERS',
-                            id:'partners',
-                            class: 'delay-500'
-                        },
-                        {
-                            name:'CONTACT US',
-                            id:'contact',
-                            class: 'delay-600'
-                        }
-                    ]
-                each m in menu
-                    li.reveal(class=`${m.class}`)
-                        a(href=`#${m.id}` data-scroll)= m.name
-        .hamburger.hamburger--squeeze.js-hamburger
-            .hamburger-box
-                .hamburger-inner
+                each m in menus
+                    li(class=`active`)
+                        a(href=`/html/${m.path}.html`)= m.name
+        .hamburger
+            div
+            div
+            div
+        .mobile-nav-back
+        .mobile-nav
+            div.close
+            // 해당 페이지 li 태그에 active 클래스 추가
+            ul
+                each m in menus
+                    li(class=`active`)
+                        a(href=`/html/${m.path}.html`)= m.name

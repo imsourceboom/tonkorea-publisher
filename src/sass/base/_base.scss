@@ -1,71 +1,70 @@
 html {
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;
-    /* Microsoft scrollbar none */
+  // scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  /* Microsoft scrollbar none */
 
-    &,
-    & * {
-        scrollbar-width: none;
-        /* window Firefox scrollbar none */
-    }
+  &,
+  & * {
+    scrollbar-width: none;
+    /* window Firefox scrollbar none */
+  }
 }
 
 ::-webkit-scrollbar {
-    display: none;
-    /* Chrome, Safari scrollbar none */
+  display: none;
+  /* Chrome, Safari scrollbar none */
 }
 
 body {
+  * {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+  }
 
-    * {
-        margin: 0;
-        padding: 0;
-        outline: none;
-        box-sizing: border-box;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul,
+  ol {
+    list-style-type: none;
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    display: block;
+  }
+
+  label {
+    color: rgba(0, 0, 0, 0.54);
+  }
+
+  input,
+  textarea {
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: rgba(112, 112, 112, 0.4);
+      opacity: 1;
+      font-size: 0.9rem;
+      /* Firefox */
     }
 
-    a {
-        text-decoration: none;
-        color: inherit;
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: rgba(112, 112, 112, 0.4);
+      font-size: 0.9rem;
     }
 
-    ul,
-    ol {
-        list-style-type: none;
-
-        li:last-child {
-            margin-bottom: 0;
-        }
+    &::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: rgba(112, 112, 112, 0.4);
+      font-size: 0.9rem;
     }
-
-    img {
-        display: block;
-    }
-
-    label {
-        color: rgba(0, 0, 0, .54);
-    }
-
-    input,
-    textarea {
-        &::placeholder {
-            /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: rgba(112, 112, 112, 0.4);
-            opacity: 1;
-            font-size: .9rem;
-            /* Firefox */
-        }
-
-        &:-ms-input-placeholder {
-            /* Internet Explorer 10-11 */
-            color: rgba(112, 112, 112, 0.4);
-            font-size: .9rem;
-        }
-
-        &::-ms-input-placeholder {
-            /* Microsoft Edge */
-            color: rgba(112, 112, 112, 0.4);
-            font-size: .9rem;
-        }
-    }
+  }
 }

@@ -1,19 +1,16 @@
-import {
-    header
-} from '../elements'
+// import {
+//     header
+// } from '../elements'
 
-
-const hamburger = header.hamburger;
-const nav = header.nav;
-const li = Array.from(header.li);
+const hamburger = document.querySelector(".hamburger");
+const mobileNavBack = document.querySelector(".mobile-nav-back");
+const mobileNav = document.querySelector(".mobile-nav");
+const close = document.querySelector(".mobile-nav .close");
 
 const trigger = (e) => {
-    hamburger.classList.toggle('is-active');
-    nav.classList.toggle('active');
-}
+  mobileNav.classList.toggle("active");
+  mobileNavBack.classList.toggle("active");
+};
 
-hamburger.addEventListener('click', trigger);
-
-li.map((i) => {
-    i.addEventListener('click', trigger);
-});
+hamburger.addEventListener("click", trigger);
+close.addEventListener("click", trigger);

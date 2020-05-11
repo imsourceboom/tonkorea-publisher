@@ -1,7 +1,7 @@
-import './smoothscroll';
-import './scrollreveal';
-import './hamburger';
-import './menu';
+// import "./smoothscroll";
+// import "./scrollreveal";
+import "./hamburger";
+// import "./menu";
 
 // if ('serviceWorker' in navigator) {
 //     window.addEventListener('load', function() {

@@ -1,20 +1,7 @@
-@import 'utils/var',
-'utils/mixins';
+@import "utils/var", "utils/mixins";
 
-@import 'base/reset',
-'base/typography',
-'base/base';
+@import "base/reset", "base/typography", "base/base";
 
-@import 'library/hamburger';
+@import "layout/header", "layout/main", "layout/footer";
 
-@import 'layout/intro',
-// 'layout/header',
-'layout/main',
-'layout/footer';
-
-@import 'section/about',
-'section/portfolio',
-'section/contents',
-'section/newpage';
-
-@import 'components/cube';
+@import "pages/home";

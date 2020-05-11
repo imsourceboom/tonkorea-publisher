@@ -1,2 +1,51 @@
-//- footer
-    h1 footer@gemail.com
+-
+    var menus = [
+        {
+            name: '참고자료',
+            path: 'resources',
+        }, 
+        {
+            name: '참여',
+            path: 'participate',
+        }, 
+        {
+            name: '멤버십',
+            path: 'members'
+        }, 
+        {
+            name: '커뮤니티',
+            path: 'coummunity'
+        }, 
+        {
+            name: '뉴스', 
+            path: 'news',
+        },
+        {
+            name: '문의/연락처',
+            path: 'contact'
+        }
+    ]
+- var resources = ['TON 블록체인', '커뮤니티', '백서 / 프라이머', '생태계']
+- var participate = ['그램', '노드 / 스테이킹']
+- var news = ['미디어', 'TON 블록체인']
+footer
+    figure.logo
+        img(src="/assets/images/logos/ton-horizontal-w.svg", alt="Logo")
+    ul.site-map
+        each m in menus
+            li
+                p
+                    a(href=`/${m.path}`)= m.name
+                if m.name == menus[0].name
+                    each sub in resources
+                        p
+                            a(href="")= sub
+                if m.name == menus[1].name
+                    each sub in participate
+                        p
+                            a(href="")= sub
+                if m.name == menus[4].name
+                    each sub in news
+                        p
+                            a(href="")= sub
+    .copy-right Copyright © Ton Korea. All rights Reserved.

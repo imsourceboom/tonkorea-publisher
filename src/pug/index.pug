@@ -1,20 +1,107 @@
 extends ./_layout
 
 block main
-    include layout/header
-    include section/about
-    include section/services
-    include section/team
-    include section/portfolio
-    include section/partners
-    include section/contact
-        
-//- block main
-//-     include layout/header
-//-     include section/about
-//-     include section/services
-//-     include section/team
-//-     include section/portfolio
-//-     include section/partners
-//-     include section/contact
-        
+    section#home
+        article.comments
+            .wrapper
+                img(src="/assets/images/logos/ton-logo.svg", alt="Logo")
+                h3
+                    | 진정한 탈중앙화 네트워크인 The Open Network 실현하여
+                    <br/>
+                    | 모두의 프라이버시가 보호되는 자유로운 디지털 세상을 꿈꿉니다.
+                p
+                    | 톤코리아는 진정한 탈중앙화 네트워크인 TON 블록체인을 확장하여 디지털 세상의 프라이버시와 표현의 자유를 보호하기 위해 존재하며
+                    <br/>
+                    | TON 프로젝트와 관련된 개발자, 벨리데이터 및 풀노드 운영자와 TON 생태계에 관심있는 모든 개인 및 회사들이 참여할 수 있습니다. 
+                    <br/>
+                    | 우리는 
+                    | <a href="https://freeton.org" target="_black">Free TON 커뮤니티</a>
+                    | 의 핵심 멤버로서 전 세계의 모든 TON 커뮤니티와 협력하여 신속하게 TON 네트워크를 발전시키는 것에 목적을 둡니다.
+
+        article#core
+            .wrapper
+                h3 핵심가치
+                ul
+                    li
+                        figure
+                            img(src="/assets/images/home/core_value/unprofitability.svg", alt="")
+                            figcaption 비영리
+                        p 톤코리아는 비영리단체로서 법인이 관리하는 모든 자산과 수익은 설립목적과 본질에 준하는 내에서 교육, R&D, 보조금 및 TON 생태계 발전을 위한 모든 수단에 동원됩니다.
+                    li
+                        figure
+                            img(src="/assets/images/home/core_value/transparency.svg", alt="")
+                            figcaption 투명성
+                        p 톤코리아는 운영과 회계의 투명성을 위해 재단의 결정, 투표, 계획, 자금 배분, 회의록을 포함한 모든 정보를 TON 영구원장에 기록합니다.
+                    li
+                        figure
+                            img(src="/assets/images/home/core_value/fairness.svg", alt="")
+                            figcaption 공정성
+                        p 톤코리아는 재단 운영 방향성과 자금 운용 및 중요한 사안에 대한 결정은 재단 멤버의 투표로 결정됩니다. 
+
+        article#membership
+            .wrapper
+                h3 멤버십
+                figure
+                   svg(viewbox='0 0 684 531')
+                        g(transform='translate(-618 -1475)')
+                            path(d='M-2824.122,4632.94l197.72-177.168L-3020.75,4275.02' transform='translate(3906.88 -2710.672)' fill='none' stroke='#fff' stroke-width='1')
+                            path(d='M-3051.97,4268.5l-183.251,276.814,377.964,93.361Z' transform='translate(3936.593 -2709.769)' fill='none' stroke='#fff' stroke-width='1')
+                            circle(cx='84' cy='84' r='84' transform='translate(801 1475)' fill='#fff')
+                            text(transform='translate(885 1569)' font-size='26' font-family='TitilliumWeb-Regular, Titillium Web')
+                                tspan(x='-46.189' y='0') 샤드체인
+                            circle(cx='84' cy='84' r='84' transform='translate(618 1750)' fill='#fff')
+                            text(transform='translate(701 1844)' font-size='26' font-family='TitilliumWeb-Regular, Titillium Web')
+                                tspan(x='-46.189' y='0') 워크체인
+                            circle(cx='84' cy='84' r='84' transform='translate(999 1838)' fill='#fff')
+                            text(transform='translate(1083 1931)' font-size='25' font-family='TitilliumWeb-Regular, Titillium Web')
+                                tspan(x='-55.325' y='0') 마스터체인
+                                formattedmessage(id='home.membership.figure.master')
+                            path(d='M20.5,0A20.5,20.5,0,1,1,0,20.5,20.5,20.5,0,0,1,20.5,0Z' transform='translate(1261 1723)' fill='#fff')
+                ul
+                    li
+                        .title 멤버십
+                        p.content 톤코리아는 샤드체인, 워크체인, 마스터체인 멤버로 이루어져 있습니다. 
+                    li
+                        .title 샤드체인 멤버 (준회원)
+                        p.content 우리는 여러분의 참여를 기다리고 있습니다. TON 커뮤니티에 동참하고 싶은 분들은 누구든지 간단한 신청서를 작성하여 샤드체인 멤버가 될 수 있습니다.
+                    li
+                        .title 워크체인 멤버 (정회원)
+                        p.content 워크체인 멤버는 톤코리아의 주축 멤버로서 투표권을 행사할 수 있으며 소액의 회비와 개인정보 확인 절차가 필요합니다. 
+                    li
+                        .title 마스터체인 멤버 (임원)
+                        p.content 마스터체인 멤버는 TON 생태계 발전에 핵심이 되는 TON 커뮤니티의 중요 멤버들로 구성합니다. 현재 마스터체인은 재단 설립자들로 이루어져 있으며 이후 최대 150명까지 확대합니다. 새로운 마스터체인 멤버가 되기 위해서는 기존의 멤버와 교체해야 하며 장기 멤버가 될 수 있으나 영구적이진 않습니다. 마스터체인은 운영위원회의 결정에 거부권을 행사할 수 있습니다. 
+ 
+        article#governance
+            .wrapper
+                h3 거버넌스
+                div.figure-wrapper
+                    figure
+                        img(src="/assets/images/home/governance/governance.svg", alt="거버넌스")
+                        figcaptiona 거버넌스
+                    figure
+                        img(src="/assets/images/home/governance/mans.svg", alt="운영위원회")
+                        figcaption 운영위원회
+                    figure
+                        img(src="/assets/images/home/governance/magnifier.svg", alt="감사위원회")
+                        figcaption 감사위원회
+                ul
+                    li
+                        .title 거버넌스
+                        p.content 톤코리아는 현재 초기설립자들에 의해 현재 운영되고 있습니다. 설립자들은 재단의 운영정책과 의사결정 절차에 대한 규정을 강구하고 시행할 계획입니다. 규정이 시행되기 전까지 아래와 같은 임시적 운영 구조를 적용합니다. 
+                    li
+                        .title 운영위원회
+                        p.content 운영위원회는 재단의 핵심 운영 기구이며 톤코리아 회원들의 투표로 의해 선출된 11명의 위원으로 이루어져 있습니다. 위원들은 2년의 임기동안 재단을 운영합니다. 위원회 선거절차는 추후에 공지됩니다.
+                    li
+                        .title 감사위원회
+                        p.content 감시위원회는 톤코리아의 회원이 아니며 IT와 블록체인 업계에서 큰 영향력을 행사하는 다양한 전문가와 언론인으로 구성되어 있습니다. 감시위원회는 재단의 투명성과 명확성을 위해 존재하며 톤코리아의 토론과 운영위원회의 회의 참여권한을 가집니다. 감시원은 운영에 대한 권한은 없지만 회의 안건에 대한 주제를 제안할 수 있습니다. 
+
+        .home_navi
+            .wrapper
+                p
+                    a(href="#core") 핵심가치
+                p
+                p
+                    a(href="#membership") 멤버십
+                p
+                p
+                    a(href="#governance") 거버넌스
