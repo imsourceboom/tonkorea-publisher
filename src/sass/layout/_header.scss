@@ -36,7 +36,22 @@ header {
       display: none;
 
       @media (min-width: 1024px) {
-        display: block;
+        display: flex;
+        align-items: center;
+      }
+
+      .sign-in,
+      .sign-out {
+        margin: 0 40px;
+
+        a {
+          color: #0088cc;
+          font-size: 0.95em;
+
+          &:first-child {
+            margin-right: 20px;
+          }
+        }
       }
 
       ul {

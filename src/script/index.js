@@ -1,6 +1,7 @@
 // import "./smoothscroll";
 // import "./scrollreveal";
 import "./hamburger";
+import "./languageSelect";
 // import "./menu";
 
 // if ('serviceWorker' in navigator) {

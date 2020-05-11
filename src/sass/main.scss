@@ -4,4 +4,8 @@
 
 @import "layout/header", "layout/main", "layout/footer";
 
-@import "pages/home", "pages/contact", "pages/news";
+@import "pages/home", "pages/contact", "pages/news", "pages/resources",
+  "pages/participate", "pages/members", "pages/community", "pages/login",
+  "pages/join";
+
+@import "components/language-select", "components/coming-soon";
