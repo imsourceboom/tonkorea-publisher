@@ -32,12 +32,13 @@ header
                 img(src="/assets/images/logos/ton-symbol.svg" alt="Logo")
         nav.desktop
             include ../components/languageSelect
+            // 로그인 했을 시 sign-in || 로그아웃 했을 시 sign-out
             .sign-in
                 a(href="/html/log-in.html") Login
                 a(href="/html/join.html") Join
-            //- .sign-out
-            //-     a(href="/html/log-in.html") Username
-            //-     a(href="/html/join.html") Logout
+            // .sign-out
+            //     a(href="/html/log-in.html") Username
+            //     a(href="/html/join.html") Logout
             // 해당 페이지 li 태그에 active 클래스 추가
             ul
                 each m in menus
