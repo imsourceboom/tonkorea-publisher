@@ -2,3 +2,37 @@ extends ../_layout
 
 block main
     section#contact
+        article
+            h2 문의/연락처
+            ul
+                -
+                    var emails = [
+                        {
+                            name: '문의',
+                            address: 'inquiries'
+                        },
+                        {
+                            name: '협력',
+                            address: 'coop'
+                        },
+                        {
+                            name: '멤버십',
+                            address: 'member'
+                        },
+                        {
+                            name: '노드',
+                            address: 'node'
+                        },
+                    ]
+                li(class='email')
+                    each email in emails
+                        div
+                            p= email.name
+                            span= `${email.address}` 
+                                | @tonkorea.org
+                li(class='sns')
+                    div
+                        a(href='https://t.me/tonkoreaorg' target='_blank')
+                            figure
+                                img(src='/assets/images/sns/telegram.svg' alt='telegram icon')
+                            span @tonkoreaorg
