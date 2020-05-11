@@ -3,7 +3,7 @@ extends ../_layout
 block main
     section#contact
         article
-            h2 문의/연락처
+            h2 문의 / 연락처
             ul
                 -
                     var emails = [
@@ -22,13 +22,13 @@ block main
                         {
                             name: '노드',
                             address: 'node'
-                        },
+                        }
                     ]
                 li(class='email')
                     each email in emails
                         div
                             p= email.name
-                            span= `${email.address}` 
+                            span= email.address 
                                 | @tonkorea.org
                 li(class='sns')
                     div
