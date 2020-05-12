@@ -98,7 +98,151 @@
       </div>
     </header>
     <main>
-      <section id="join"></section>
+      <section id="join">
+        <form class="wrapper" action="">
+          <hgroup>
+            <h2>회원가입</h2>
+          </hgroup>
+          <div class="title-group">
+            <div class="title">샤드체인 멤버십</div>
+            <p class="description">
+              샤드체인 멤버는 톤코리아의 가장 기본적인 멤버십입니다. <br/>
+              톤코리아에 동참하기 원하는 사람은 누구든지 간단한 신청서를 작성하여 멤버십에 가입할 수 있습니다. 
+            </p>
+          </div>
+          <ul class="order--board error">
+            <li>
+              <div class="title">이름</div>
+              <div class="description">
+                <label class="inputbox--component mb-0" for="" style="max-width: 256px;">
+                  <input/><span class="warning"></span><span class="able"></span>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="title">이메일 주소</div>
+              <div class="description">
+                <label class="inputbox--component mb-0" for="" style="max-width: 256px;">
+                  <input/><span class="warning"></span><span class="able"></span>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="title">전화번호</div>
+              <div class="description">
+                <select class="select--component mr-05">
+                  <option>010</option>
+                  <option>011</option>
+                  <option>016</option>
+                  <option>019</option>
+                </select>
+                <label class="inputbox--component mb-0 mr-05" for="" style="max-width: 80px;">
+                  <input/><span class="warning"></span><span class="able"></span>
+                </label>
+                <label class="inputbox--component mb-0" for="" style="max-width: 80px;">
+                  <input/><span class="warning"></span><span class="able"></span>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="title">텔레그램 사용자명</div>
+              <div class="description">
+                <label class="inputbox--component mb-0" for="" style="max-width: 256px;">
+                  <input/><span class="warning"></span><span class="able"></span>
+                </label>
+              </div>
+            </li>
+            <li class="country">
+              <div class="title">국적</div>
+              <div class="description">
+                <div class="country-wrapper">
+                  <div class="box">
+                    <input class="radio--button-component" type="radio" name="country" id="korea" value="value" hidden="hidden" checked="checked"/>
+                    <label for="korea">한국</label>
+                    <input class="radio--button-component" type="radio" name="country" id="other-country" value="value" hidden="hidden"/>
+                    <label for="other-country">그 외</label>
+                    <select class="select--component" disabled="disabled">
+                    </select>
+                  </div>
+                  <div class="box">
+                    <p class="annotation">* 유의사항 | 미국 거주자, 시민, 기업 등의 회원가입을 제한합니다.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="member-kind">
+              <div class="title">회원유형</div>
+              <div class="description">
+                <div class="member-kind-wrapper">
+                  <div class="flex column">
+                    <input class="radio--button-component" type="radio" name="member-kind" id="personal" value="value" hidden="hidden" checked="checked"/>
+                    <label for="personal">개인회원</label>
+                    <input class="radio--button-component" type="radio" name="member-kind" id="company" value="value" hidden="hidden"/>
+                    <label for="company">기업회원</label>
+                  </div>
+                  <div class="company-box">
+                    <div><span>회사/단체명</span>
+                      <label class="inputbox--component" for="">
+                        <input type="text" disabled="disabled"/><span class="warning"></span><span class="able"></span>
+                      </label>
+                    </div>
+                    <div><span>홈페이지 주소</span>
+                      <label class="inputbox--component mb-0" for="" style="max-width: 256px;">
+                        <input type="text" disabled="disabled"/><span class="warning"></span><span class="able"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="interest">
+              <div class="title">관심분야</div>
+              <div class="description">
+                <div class="flex column interest-wrapper">
+                  <div class="box">
+                    <label class="checkbox--component" for="development">
+                      <input type="checkbox" id="development"/><span>개발</span>
+                    </label>
+                  </div>
+                  <div class="box">
+                    <label class="checkbox--component" for="validator">
+                      <input type="checkbox" id="validator"/><span>노드 / 벨리데이터</span>
+                    </label>
+                  </div>
+                  <div class="box">
+                    <label class="checkbox--component" for="staking">
+                      <input type="checkbox" id="staking"/><span>스테이킹</span>
+                    </label>
+                  </div>
+                  <div class="box ecosystem">
+                    <label class="checkbox--component" for="ecosystem">
+                      <input type="checkbox" id="ecosystem"/><span>TON 블록체인 생태계</span>
+                    </label>
+                    <label class="inputbox--component" for="">
+                      <input type="text" disabled="disabled"/><span class="warning"></span><span class="able"></span>
+                    </label>
+                  </div>
+                  <div class="box other-interest">
+                    <label class="checkbox--component" for="other-interest">
+                      <input type="checkbox" id="other-interest"/><span>그 외</span>
+                    </label>
+                    <label class="inputbox--component" for="">
+                      <input type="text" disabled="disabled"/><span class="warning"></span><span class="able"></span>
+                    </label>
+                  </div>
+                  <p class="annotation">*복수선택 가능</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="agree-cpnt">
+            <label class="checkbox--component">
+              <input type="checkbox"/><span>이용약관을 확인했으며 이에 동의합니다.</span>
+            </label><a href="">이용약관 확인</a>
+          </div>
+          <button class="submit-btn">회원가입</button>
+        </form>
+      </section>
     </main>
     <footer>
       <figure class="logo"><img src="/assets/images/logos/ton-horizontal-w.svg" alt="Logo"></figure>

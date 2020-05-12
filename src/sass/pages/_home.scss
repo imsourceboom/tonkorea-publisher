@@ -148,7 +148,7 @@ section#home {
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
-    padding: 150px $commonPadding + px;
+    padding: 120px $commonPadding + px;
 
     @media (min-width: 768px) {
       padding: 200px $commonPadding + px;
@@ -234,7 +234,7 @@ section#home {
   }
 
   article#governance {
-    padding: 120px $commonPadding + px;
+    padding: 100px $commonPadding + px;
 
     @media (min-width: 1024px) {
       padding: 100px $commonPadding + 10px 140px;

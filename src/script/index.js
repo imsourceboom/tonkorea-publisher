@@ -1,4 +1,5 @@
-// import "./smoothscroll";
+import "./smoothscroll";
+import "./join";
 // import "./scrollreveal";
 import "./hamburger";
 import "./languageSelect";

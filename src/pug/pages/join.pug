@@ -1,4 +1,81 @@
 extends ../_layout
+include ../components/inputBox
+include ../components/radioButton
+include ../components/selectBox
+include ../components/textarea
+include ../components/checkBox
 
 block main
     section#join
+        form(action="").wrapper
+            hgroup
+                h2 회원가입
+            .title-group
+                .title 샤드체인 멤버십
+                p.description
+                    | 샤드체인 멤버는 톤코리아의 가장 기본적인 멤버십입니다. <br/>
+                    | 톤코리아에 동참하기 원하는 사람은 누구든지 간단한 신청서를 작성하여 멤버십에 가입할 수 있습니다. 
+            ul.order--board.error
+                li
+                    .title 이름
+                    .description
+                        +inputBox().mb-0(style="max-width: 256px;")
+                li
+                    .title 이메일 주소
+                    .description
+                        +inputBox().mb-0(style="max-width: 256px;")
+                li
+                    .title 전화번호
+                    .description
+                        +selectBox('010', '011', '016', '019').mr-05
+                        +inputBox().mb-0(style="max-width: 80px;").mr-05
+                        +inputBox().mb-0(style="max-width: 80px;")
+                li
+                    .title 텔레그램 사용자명
+                    .description
+                        +inputBox().mb-0(style="max-width: 256px;")
+                li.country
+                    .title 국적
+                    .description
+                        .country-wrapper
+                            .box
+                                +radioButton('country', '한국', 'korea', '그 외', 'other-country')
+                                +selectBox()(disabled)
+                            .box
+                                p.annotation * 유의사항 | 미국 거주자, 시민, 기업 등의 회원가입을 제한합니다.
+                li.member-kind
+                    .title 회원유형
+                    .description
+                        .member-kind-wrapper
+                            .flex.column
+                                +radioButton('member-kind', '개인회원', 'personal', '기업회원', 'company')
+                            .company-box
+                                div
+                                    span 회사/단체명
+                                    +inputBox('text', null, null, null, true)
+                                div
+                                    span 홈페이지 주소
+                                    +inputBox('text', null, null, null, true).mb-0(style="max-width: 256px;")
+                li.interest
+                    .title 관심분야
+                    .description
+                        .flex.column.interest-wrapper
+                            .box
+                                +checkBox('개발', 'development')
+                            .box
+                                +checkBox('노드 / 벨리데이터', 'validator')
+                            .box
+                                +checkBox('스테이킹', 'staking')
+                            .box.ecosystem
+                                +checkBox('TON 블록체인 생태계', 'ecosystem')
+                                +inputBox('text', null, null, null, true)
+                            .box.other-interest
+                                +checkBox('그 외', 'other-interest')
+                                +inputBox('text', null, null, null, true)
+                            p.annotation *복수선택 가능
+            .agree-cpnt
+                +checkBox('이용약관을 확인했으며 이에 동의합니다.')
+                a(href="") 이용약관 확인
+            button.submit-btn 회원가입
+            
+            

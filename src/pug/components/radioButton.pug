@@ -1,0 +1,19 @@
+mixin radioButton(name, one, oneId, two, twoId, three, threeId, four, fourId, five, fiveId, six, sixId)
+    if one
+        input(type="radio" name=name id=oneId value hidden checked).radio--button-component
+        label(for=oneId)=one
+    if two
+        input(type="radio" name=name id=twoId value hidden).radio--button-component
+        label(for=twoId)=two
+    if three
+        input(type="radio" name=name id=threeId value hidden).radio--button-component
+        label(for=threeId)=three
+    if four
+        input(type="radio" name=name id=fourId value hidden).radio--button-component
+        label(for=fourId)=four
+    if five
+        input(type="radio" name=name id=fiveId value hidden).radio--button-component
+        label(for=fiveId)=five
+    if six
+        input(type="radio" name=name id=sixId value hidden).radio--button-component
+        label(for=sixId)=six

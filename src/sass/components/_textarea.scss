@@ -1,0 +1,11 @@
+.textarea--component {
+  width: 100%;
+  border: 1px solid rgba(62, 62, 62, 0.35);
+  padding: 0.8rem;
+  padding-bottom: 0;
+  font-size: 14px;
+
+  @media (min-width: 768px) {
+    font-size: 15px;
+  }
+}

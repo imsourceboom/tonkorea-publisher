@@ -1,0 +1,5 @@
+mixin inputBox(type, placeholder, warning, able, disabled, hidden)
+    label(for="").inputbox--component&attributes(attributes)
+        input(type=type, placeholder=placeholder disabled=disabled hidden=hidden)
+        span.warning=warning
+        span.able=able

@@ -1,2 +1,267 @@
+%padding {
+  padding: 0 12px;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+}
+
 section#join {
+  padding: 100px 0;
+
+  @media (min-width: 768px) {
+    padding: 150px 0;
+  }
+
+  .wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  hgroup {
+    margin-bottom: 50px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      margin-bottom: 70px;
+    }
+  }
+
+  .title-group {
+    @extend %padding;
+    margin-bottom: 16px;
+
+    .title {
+      color: #0088cc;
+      font-size: 1.25rem;
+      margin-bottom: 5px;
+    }
+
+    p.description {
+      color: #777;
+      font-size: 0.88rem;
+    }
+  }
+
+  ul.order--board {
+    position: relative;
+    margin: 0 0 1rem;
+
+    @media (min-width: 768px) {
+      margin: 0 0 1rem;
+    }
+
+    &.error {
+      li {
+        &.caution {
+          border: 0;
+          min-height: initial;
+        }
+      }
+    }
+
+    li {
+      position: relative;
+      min-height: 60px;
+      display: flex;
+      border-bottom: 1px solid rgb(112, 112, 112);
+      font-size: 12px;
+
+      @media (min-width: 768px) {
+        font-size: 14px;
+      }
+
+      &:first-child {
+        min-height: 40px;
+        border-top: 5px solid rgb(62, 62, 62);
+        font-weight: bolder;
+        font-size: 14px;
+
+        @media (min-width: 768px) {
+          font-size: 15px;
+        }
+      }
+
+      .title {
+        width: 100%;
+        max-width: 90px;
+        padding: 23px 0;
+        display: flex;
+        background-color: rgb(244, 244, 244);
+        justify-content: center;
+        font-weight: bolder;
+
+        @media (min-width: 768px) {
+          max-width: 277px;
+          justify-content: flex-start;
+          padding-left: 2rem;
+        }
+      }
+
+      .description {
+        position: relative;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+
+        @media (min-width: 768px) {
+          padding: 0 2rem;
+        }
+
+        .annotation {
+          color: #0088cc;
+          font-size: 11px;
+
+          @media (min-width: 768px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  ul.order--board {
+    li.interest,
+    li.country,
+    li.member-kind {
+      .description {
+        padding-top: 1rem;
+        padding-bottom: 0.7rem;
+      }
+
+      .country-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        select {
+          width: 100px;
+          height: 32px;
+          font-size: 13px;
+          text-align-last: left;
+          padding-left: 10px;
+          opacity: 0.5;
+        }
+
+        p {
+          padding-top: 0.7rem;
+        }
+      }
+
+      .member-kind-wrapper {
+        width: 100%;
+        .flex {
+          & > label {
+            margin-bottom: 1rem;
+
+            &:last-child {
+              margin-bottom: 0.5rem;
+            }
+          }
+        }
+
+        select {
+          height: 34px;
+        }
+
+        .company-box {
+          display: flex;
+          flex-direction: column;
+
+          @media (min-width: 768px) {
+            flex-direction: row;
+          }
+
+          & > div {
+            width: 100%;
+
+            &:first-child {
+              label {
+                margin-bottom: 0.8rem;
+                @media (min-width: 768px) {
+                  margin-bottom: 0;
+                }
+              }
+
+              @media (min-width: 768px) {
+                margin-right: 1rem;
+              }
+            }
+
+            @media (min-width: 768px) {
+              label {
+                margin-bottom: 0;
+              }
+            }
+          }
+          span {
+            font-size: 12px;
+            color: #777;
+            opacity: 0.5;
+
+            @media (min-width: 768px) {
+              font-size: 13px;
+            }
+          }
+          input {
+            height: 32px;
+            opacity: 0.5;
+          }
+        }
+      }
+
+      .interest-wrapper {
+        width: 100%;
+
+        .box {
+          margin-bottom: 0.8rem;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+
+          .inputbox--component {
+            input {
+              height: 32px;
+              width: 100%;
+              opacity: 0.5;
+
+              @media (min-width: 768px) {
+                max-width: 225px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .agree-cpnt {
+    display: flex;
+    align-items: center;
+    @extend %padding;
+
+    label {
+      margin-right: 1.3rem;
+      span {
+        font-size: 13px;
+      }
+    }
+
+    a {
+      color: #0088cc;
+      font-size: 12px;
+    }
+  }
+
+  button.submit-btn {
+    display: block;
+    border: 0;
+    background-color: #0088cc;
+    color: white;
+    margin: 70px auto 0;
+    width: 200px;
+    height: 36px;
+    font-size: 1rem;
+  }
 }

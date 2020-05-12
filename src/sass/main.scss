@@ -1,6 +1,6 @@
 @import "utils/var", "utils/mixins";
 
-@import "base/reset", "base/typography", "base/base";
+@import "base/reset", "base/typography", "base/base", "base/share";
 
 @import "layout/header", "layout/main", "layout/footer";
 
@@ -8,4 +8,6 @@
   "pages/participate", "pages/members", "pages/community", "pages/login",
   "pages/join";
 
-@import "components/language-select", "components/coming-soon";
+@import "components/language-select", "components/coming-soon",
+  "components/input-box", "components/radio-button", "components/select-box",
+  "components/textarea", "components/check-box";
