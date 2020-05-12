@@ -35,7 +35,7 @@ footer
         each m in menus
             li
                 p
-                    a(href=`/${m.path}`)= m.name
+                    a(href=`/html/${m.path}.html`)= m.name
                 if m.name == menus[0].name
                     each sub in resources
                         p

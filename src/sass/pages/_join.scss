@@ -237,9 +237,14 @@ section#join {
   }
 
   .agree-cpnt {
-    display: flex;
-    align-items: center;
     @extend %padding;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+    }
 
     label {
       margin-right: 1.3rem;
@@ -251,6 +256,13 @@ section#join {
     a {
       color: #0088cc;
       font-size: 12px;
+      margin-top: 10px;
+      margin-left: 20px;
+
+      @media (min-width: 768px) {
+        margin-top: 3px;
+        margin-left: 0px;
+      }
     }
   }
 
@@ -263,5 +275,6 @@ section#join {
     width: 200px;
     height: 36px;
     font-size: 1rem;
+    cursor: pointer;
   }
 }

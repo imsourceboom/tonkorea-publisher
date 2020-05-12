@@ -1,0 +1,23 @@
+section#clause {
+  padding: 100px 10px;
+
+  @media (min-width: 768px) {
+    padding: 150px 1rem;
+  }
+
+  .wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    text-align: center;
+    padding: 80px 0;
+    font-size: 26px;
+    border-top: 5px solid #222;
+
+    @media (min-width: 768px) {
+      padding: 100px 0;
+    }
+  }
+}
