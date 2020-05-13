@@ -13,13 +13,14 @@ block main
                 ul
                     while n < 10
                         li(data-count= n++)
-                            //이미지가 없다면 image-wrap 클래스 div tag 자체가 없다.
-                            .image-wrap
-                                figure
-                                    img(src=`https://source.unsplash.com/collection/19072${n}/400x300`)
-                            .contents-wrap
-                                .title 제목 부분입니다. 제목 부분을 일부러 길게 쓰고 있습니다. 디바이스 테스트를 위해 길게 씁니다. 길게 씁니다.
-                                .date 2020.05.13
+                            a(href="/html/detail.html")
+                                //이미지가 없다면 image-wrap 클래스 div tag 자체가 없다.
+                                .image-wrap
+                                    figure
+                                        img(src=`https://source.unsplash.com/collection/19072${n}/400x300`)
+                                .contents-wrap
+                                    .title 제목 부분입니다. 제목 부분을 일부러 길게 쓰고 있습니다. 디바이스 테스트를 위해 길게 씁니다. 길게 씁니다.
+                                    .date 2020.05.13
             include ../components/grid
             .loading-wrap
                 include ../components/spinner

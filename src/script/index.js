@@ -3,6 +3,7 @@ import "./join";
 // import "./scrollreveal";
 import "./hamburger";
 import "./languageSelect";
+import "./detail";
 // import "./menu";
 
 // if ('serviceWorker' in navigator) {
