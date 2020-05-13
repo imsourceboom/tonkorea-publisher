@@ -1,0 +1,39 @@
+article.grid.media
+    a.grid-item(href="/html/detail.html", style="cursor:initial;")
+        .content
+            //- img(src=`https://placehold.it/500x300`).photothumb
+            .desc
+                p.title
+                    | 제목 부분입니다. 제목을 2줄이상이 되겠끔 합니다.
+                    | 2줄 이상이면 ellipsis가 적용되야 합니다.
+                //- .summar
+                    | 몸과 마음을 바쳐 충성을 다할 것을 굳게 다짐합니다.
+                .who
+                    //- img(src="/assets/images/svg/project/telegram.svg")
+                    //- span.firm 앰브로서스
+                    //- span.author [작성자이름]
+                    span.date 2018.11.20
+    - for (var x = 0; x < 15; x++)
+        - var width = Math.floor(Math.random()*(1000-400+1)+400)
+        - var height = Math.floor(Math.random()*(600-400+1)+400)
+        //- 미디언 디자인
+        a.grid-item(href="/html/detail.html", style="cursor:initial;")
+            .content
+                img(src=`https://placehold.it/${width}x${height}`).photothumb
+                .desc
+                    p.title
+                        | 제목 부분입니다. 제목을 2줄이상이 되겠끔 합니다.
+                        | 2줄 이상이면 ellipsis가 적용되야 합니다.
+                    //- .summary
+                        | 나는 자랑스런 태극기앞에 조국과 민족의 무궁한 영광을 위하여
+                        | 몸과 마음을 바쳐 충성을 다할 것을 굳게 다짐합니다.
+                        | 나는 자랑스런 태극기앞에 조국과 민족의 무궁한 영광을 위하여
+                        | 나는 자랑스런 태극기앞에 조국과 민족의 무궁한 영광을 위하여
+                        | 몸과 마음을 바쳐 충성을 다할 것을 굳게 다짐합니다.
+                        | 나는 자랑스런 태극기앞에 조국과 민족의 무궁한 영광을 위하여
+                        | 몸과 마음을 바쳐 충성을 다할 것을 굳게 다짐합니다.
+                    .who
+                        //- img(src="/assets/images/svg/project/telegram.svg")
+                        //- span.firm 앰브로서스
+                        //- span.author [작성자이름]
+                        span.date 2020.05.22

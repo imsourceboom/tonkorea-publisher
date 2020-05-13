@@ -2,9 +2,31 @@ extends ../_layout
 
 block main
     section#news
-        figure
+        .wrapper
+            h2 뉴스
+            .filter
+                // 해당 div에 active 클래스 추가
+                div.active TON 블록체인
+                div 미디어
+            article.blockchain
+                - var n = 0;
+                ul
+                    while n < 10
+                        li(data-count= n++)
+                            //이미지가 없다면 image-wrap 클래스 div tag 자체가 없다.
+                            .image-wrap
+                                figure
+                                    img(src=`https://source.unsplash.com/collection/19072${n}/400x300`)
+                            .contents-wrap
+                                .title 제목 부분입니다. 제목 부분을 일부러 길게 쓰고 있습니다. 디바이스 테스트를 위해 길게 씁니다. 길게 씁니다.
+                                .date 2020.05.13
+            include ../components/grid
+            .loading-wrap
+                include ../components/spinner
+
+        //- figure
             img(src="/assets/images/logos/ton-horizontal.svg", alt="Logo")
-        article(class='korean')
+        //- article(class='korean')
             div
                 h3
                     | TON 업데이트 : 투자자들께 드리는 편지 <br />
@@ -37,7 +59,7 @@ block main
                 p
                     | 감사합니다. <br/>
                     span 텔레그램 팀 드림
-        article(class='english')
+        //- article(class='english')
             div
                 h3
                     | TON Update: A letter to investors <br/>
