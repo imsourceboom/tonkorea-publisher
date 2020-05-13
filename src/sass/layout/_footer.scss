@@ -74,9 +74,31 @@ footer {
     }
   }
 
-  .copy-right {
+  .rest {
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media (min-width: 1366px) {
+      align-items: flex-start;
+    }
+
+    .clause-and-admin {
+      width: 100%;
+      max-width: 274px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      color: #555;
+
+      img {
+        width: 18px;
+      }
+    }
+
+    p.copy-right {
+    }
   }
 }
