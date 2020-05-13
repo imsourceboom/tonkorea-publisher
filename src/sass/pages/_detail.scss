@@ -14,12 +14,12 @@ section#detail {
     width: 100%;
     margin: 0 auto;
 
-    padding: {
-      top: 4.5rem;
-      right: 1rem;
-      bottom: 1.5rem;
-      left: 1rem;
-    }
+    // padding: {
+    //   top: 4.5rem;
+    //   right: 1rem;
+    //   bottom: 1.5rem;
+    //   left: 1rem;
+    // }
 
     box-sizing: border-box;
 
@@ -89,6 +89,7 @@ section#detail {
           vertical-align: top;
           margin-bottom: 12px;
           object-fit: contain;
+          display: inline-block;
         }
       }
 
@@ -210,12 +211,12 @@ section#detail {
     & .container {
       width: 80%;
 
-      padding: {
-        top: 5rem;
-        right: 0;
-        bottom: 3rem;
-        left: 0;
-      }
+      // padding: {
+      //   top: 5rem;
+      //   right: 0;
+      //   bottom: 3rem;
+      //   left: 0;
+      // }
 
       .profile {
         padding: 2.5rem 0;
@@ -248,12 +249,12 @@ section#detail {
     & .container {
       width: 66.666667%;
 
-      padding: {
-        top: 5.5rem;
-        right: 0;
-        bottom: 4rem;
-        left: 0;
-      }
+      // padding: {
+      //   top: 5.5rem;
+      //   right: 0;
+      //   bottom: 4rem;
+      //   left: 0;
+      // }
 
       .title {
         font: {

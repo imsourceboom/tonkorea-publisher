@@ -1,5 +1,5 @@
 const container = document.querySelector("section#detail .container");
-const image = Array.from(
+const img = Array.from(
   document.querySelectorAll("section#detail .container img")
 );
 const iframe = Array.from(
