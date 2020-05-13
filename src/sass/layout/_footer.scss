@@ -10,7 +10,7 @@ footer {
   @media (min-width: 768px) {
     padding: 70px 30px;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1366px) {
     flex-direction: row;
     justify-content: space-between;
     padding: 70px 50px;
@@ -28,6 +28,11 @@ footer {
     /* max-width: 624px; */
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
+
+    @media (min-width: 1366px) {
+      max-width: initial;
+    }
 
     li {
       width: 50%;
@@ -39,7 +44,7 @@ footer {
         text-align: right;
       }
 
-      @media (min-width: 1024px) {
+      @media (min-width: 1366px) {
         width: initial;
         flex: 1;
         margin-right: 70px;

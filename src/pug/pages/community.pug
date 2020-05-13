@@ -2,5 +2,83 @@ extends ../_layout
 
 block main
     section#community
-
+        .wrapper
+            h2 커뮤니티
+            ul
+                -
+                    var communities = [
+                        {
+                            title: 'TON 코리아 커뮤니티 (텔레그램)',
+                            description: 'TON 코리아 커뮤니티 (텔레그램)',
+                            image: '/assets/images/logos/ton-symbol.svg',
+                            link: 'https://t.me/tonkoreaorg'
+                        },
+                        {
+                            title: 'TON Dev EN',
+                            description: '개발자 커뮤니티 (영어, 텔레그램)',
+                            image: '',
+                            link: 'https://t.me/tondev_en'
+                        },
+                        {
+                            title: 'TON Dev RU',
+                            description: '개발자 커뮤니티 (러시아어, 텔레그램)',
+                            image: '',
+                            link: 'https://t.me/tondevelopersru'
+                        },
+                        {
+                            title: 'TON Sh',
+                            description: '개발자 커뮤니티 (러시아어, 텔레그램)',
+                            image: '',
+                            link: 'https://t.me/TONtimes_chat'
+                        },
+                        {
+                            title: 'TON Info',
+                            description: '톤 관련 커뮤니티 (영어, 텔레그램)',
+                            image: '',
+                            link: 'https://t.me/infoton'
+                        },
+                        {
+                            title: 'Gram & TON France',
+                            description: '톤 관련 커뮤니티 (불어, 텔레그램)',
+                            image: '',
+                            link: 'https://t.me/gramfr'
+                        },
+                        {
+                            title: 'TON ES',
+                            description: '톤 스페인 커뮤니티 (스페인어, 텔레그램)',
+                            image: '',
+                            link: 'https://t.me/ton_es'
+                        },
+                        {
+                            title: 'TON中文社区',
+                            description: '톤 중국 커뮤니티 (중국어, 텔레그램)',
+                            image: '',
+                            link: 'https://t.me/TON_CHINA'
+                        },
+                        {
+                            title: 'TON Developers (ru)',
+                            description: '톤 개발자 커뮤니티 (영어, 텔레그램)',
+                            image: '',
+                            link: 'https://t.me/TONgramDev'
+                        },
+                        {
+                            title: 'TON Research (en)',
+                            description: '톤 개발자 커뮤니티 (영어, 텔레그램)',
+                            image: '',
+                            link: 'https://t.me/ton_research'
+                        },
+                    ]
+                each community in communities
+                    li
+                        a(href= community.link target="_blank").box
+                            .logo-wrap
+                                figure
+                                    img(src= community.image, alt="")
+                            .contents-wrap
+                                h4= community.title
+                                p=  community.description
+                            .symbol-wrap
+                                figure
+                                    img(src="/assets/images/symbols/chevron-right.svg", alt="")
+                            
 
