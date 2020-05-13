@@ -7,10 +7,10 @@ const iframe = Array.from(
 );
 // const alert= document.querySelector('section#detail .alert')
 // const share= document.querySelector('section#detail .share')
-const self = document.querySelector("section#detail");
+const detail = document.querySelector("section#detail");
 
-if (detail != null) {
-  if (container != null) {
+if (detail !== null) {
+  if (container !== null) {
     // iframe 태그들을 div.youtube-wrap 로 감싸기
     iframe.forEach((e) => {
       const youtubeWrap = document.createElement("div");
