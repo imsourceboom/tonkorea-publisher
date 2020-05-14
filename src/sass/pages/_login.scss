@@ -18,7 +18,7 @@ section#login {
 
   .login-wrapper {
     position: relative;
-    width: 215px;
+    width: 230px;
     height: 40px;
     border-radius: 20px;
     border: 1px solid #aaa;
@@ -38,7 +38,7 @@ section#login {
       line-height: 40px;
       position: absolute;
       top: 50%;
-      left: 14px;
+      // left:14px;
       transform: translate(0, -50%);
       font-weight: bold;
       background-image: url("/assets/images/sns/telegram.svg");
