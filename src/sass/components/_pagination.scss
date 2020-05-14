@@ -32,27 +32,28 @@ ul.pagination {
       }
     }
 
+    &.next,
+    &.prev,
     &.first,
     &.last {
-      margin-top: -3px;
+      // margin-top: -3px;
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
     }
 
     &.first {
-      margin-right: -15px;
-      opacity: 0.5;
-
-      &:hover {
-        opacity: 1;
-      }
+      // margin-right: -15px;
     }
 
     &.last {
-      margin-left: 5px;
-      opacity: 0.5;
+      // margin-left: 5px;
+    }
 
-      &:hover {
-        opacity: 1;
-      }
+    img {
+      display: inline-block;
     }
   }
 }
