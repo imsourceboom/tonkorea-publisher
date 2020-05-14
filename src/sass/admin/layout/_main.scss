@@ -1,0 +1,82 @@
+main#admin-main {
+  position: relative;
+
+  @media (max-width: 1023px) {
+    & * {
+      display: none;
+    }
+
+    &::before {
+      content: "🚫해상도 1024px이상부터 사용 가능합니다.🙇🏻‍♂️";
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  $navWidth: 300;
+  $side: 20;
+  & > nav#admin-nav {
+    width: $navWidth + px;
+    height: 100vh;
+    background-color: darkslategrey;
+    color: white;
+    position: fixed;
+
+    hgroup {
+      padding: 20px 0;
+
+      h3 {
+        text-align: center;
+      }
+    }
+
+    ul {
+      margin-top: 100px;
+      li {
+        margin-bottom: 40px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        a {
+          display: block;
+          position: relative;
+          width: 100%;
+
+          &::before {
+            content: "-";
+            padding: 0 15px;
+          }
+
+          &::after {
+            content: "<";
+            position: absolute;
+            right: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  & > section {
+    // min-height: 100vh;
+    // overflow-y: scroll;
+    padding: {
+      left: $navWidth + $side + px;
+      right: $side + px;
+      top: 100px;
+      bottom: 100px;
+    }
+
+    .container {
+      min-height: 100vh;
+      border: 1px solid red;
+    }
+  }
+}

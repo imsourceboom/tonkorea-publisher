@@ -1,4 +1,4 @@
-import * as countries from "../data/countries";
+// import * as countries from "../data/countries";
 
 const join = document.getElementById("join");
 // 국적
@@ -26,19 +26,20 @@ const otherInterestInput = document.querySelector(
 );
 
 if (join !== null) {
-  const firstOption = document.createElement("option");
-  // firstOption.setAttribute("disabled", "true");
-  firstOption.setAttribute("selected", "true");
-  firstOption.value = "";
-  firstOption.innerHTML = "대한민국";
-  otherSelect.appendChild(firstOption);
+  // option tag에 나라 넣기
+  // const firstOption = document.createElement("option");
+  // // firstOption.setAttribute("disabled", "true");
+  // firstOption.setAttribute("selected", "true");
+  // firstOption.value = "";
+  // firstOption.innerHTML = "대한민국";
+  // otherSelect.appendChild(firstOption);
 
-  countries.default.map((country) => {
-    const option = document.createElement("option");
-    option.setAttribute("value", "");
-    option.innerHTML = `${country}`;
-    otherSelect.appendChild(option);
-  });
+  // countries.default.map((country) => {
+  //   const option = document.createElement("option");
+  //   option.setAttribute("value", "");
+  //   option.innerHTML = `${country}`;
+  //   otherSelect.appendChild(option);
+  // });
 
   // 국적
   // koreaRadio.addEventListener("click", function (e) {

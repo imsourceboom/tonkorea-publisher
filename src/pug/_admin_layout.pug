@@ -1,4 +1,3 @@
-
 doctype html
 html(lang="ko")
     head
@@ -32,8 +31,15 @@ html(lang="ko")
 
 
         //- include layout/header
-        nav#admin-nav
         main#admin-main
+            nav#admin-nav
+                hgroup
+                    h3 TON KOREA - ADMIN
+                ul
+                    li
+                        a(href="/html/admin/board.html") 회원관리
+                    li
+                        a(href="/html/admin/member.html") 게시판 관리
             block main
 
         //- include layout/footer
