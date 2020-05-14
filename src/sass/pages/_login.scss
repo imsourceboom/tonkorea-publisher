@@ -18,7 +18,7 @@ section#login {
 
   .login-wrapper {
     position: relative;
-    width: 200px;
+    width: 215px;
     height: 40px;
     border-radius: 20px;
     border: 1px solid #aaa;
@@ -32,13 +32,13 @@ section#login {
     }
 
     &::before {
-      content: "Telegram";
+      content: "TELEGRAM 으로 로그인하기";
       display: inline-block;
       height: 40px;
       line-height: 40px;
       position: absolute;
       top: 50%;
-      left: 7px;
+      left: 14px;
       transform: translate(0, -50%);
       font-weight: bold;
       background-image: url("/assets/images/sns/telegram.svg");
@@ -46,19 +46,19 @@ section#login {
       background-position: 0 center;
       background-repeat: no-repeat;
       padding-left: 34px;
-      font-size: 15px;
-    }
-    &::after {
-      content: "으로 로그인하기";
-      display: inline-block;
-      height: 40px;
-      line-height: 40px;
-      position: absolute;
-      top: 50%;
-      left: 107px;
-      transform: translate(0, -50%);
       font-size: 13px;
     }
+    // &::after {
+    //   content: "으로 로그인하기";
+    //   display: inline-block;
+    //   height: 40px;
+    //   line-height: 40px;
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 114px;
+    //   transform: translate(0, -50%);
+    //   font-size: 13px;
+    // }
 
     iframe {
       opacity: 0;
