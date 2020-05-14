@@ -1,0 +1,13 @@
+- var p = 2;
+ul.pagination
+    li.first
+        a(href="")
+            img(src="/assets/images/symbols/chevrons-left.svg", alt="")
+    li.counts.active
+        a(href="") 1
+    while p < 6
+        li.counts
+            a(href="")=p++
+    li.last
+        a(href="")
+            img(src="/assets/images/symbols/chevrons-right.svg", alt="")

@@ -4,7 +4,7 @@ include ../../components/searchBox
 include ../../components/checkBox
 
 block main
-    section#admin-board
+    section#admin-member
         .container
             form(action="")
                 .flex.justify-end.mb-07
@@ -15,28 +15,36 @@ block main
                             th
                                 +checkBox().all-check
                             th 번호
-                            th 제목
-                            th 날짜
-                            th 조회수
+                            th 이름
+                            th 사용자명
+                            th 이메일
+                            th 전화번호
+                            th 등급
+                            th 가입일
                     tbody
                         tr.empty-wrap
-                            td(colspan="5") 정보가 없습니다.
+                            td(colspan="8") 정보가 없습니다.
                         - for (var i = 10; i > 0; i--)
                             tr
                                 td
                                     +checkBox().check
                                 td
                                     p= i
+                                td
+                                    p 홍길동
                                 td 
-                                    p [이벤트] 케이터링 서비스를 시작합니다.
-                                        img(src="/assets/images/symbols/clip.svg", alt="")
+                                    p UserNAME
                                 td
-                                    p 2020.5.12
+                                    p email.address@gmail.com
                                 td
-                                    p 11
+                                    p 010-1234-1324
+                                td
+                                    p 준회원
+                                td
+                                    p 2020.06.30
                 .flex.justify-end.mt-1
                     +confirmButton('삭제').delete
-                    +confirmButton('등록').register
+                    //- +confirmButton('등록').register
                     //- +confirmButton('수정').revise
                     //- +confirmButton('취소')
                 include ../../components/pagination

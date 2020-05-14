@@ -4,6 +4,7 @@ import "./join";
 import "./hamburger";
 import "./languageSelect";
 import "./detail";
+import "./checkBox";
 // import "./menu";
 
 // if ('serviceWorker' in navigator) {

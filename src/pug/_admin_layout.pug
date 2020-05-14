@@ -35,11 +35,12 @@ html(lang="ko")
             nav#admin-nav
                 hgroup
                     h3 TON KOREA - ADMIN
+                // 해당 메뉴 li 태그에 active 클래스 추가
                 ul
+                    li.active
+                        a(href="/html/admin/board.html") 게시판 관리
                     li
-                        a(href="/html/admin/board.html") 회원관리
-                    li
-                        a(href="/html/admin/member.html") 게시판 관리
+                        a(href="/html/admin/member.html") 회원관리
             block main
 
         //- include layout/footer

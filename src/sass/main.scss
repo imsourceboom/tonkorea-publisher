@@ -11,6 +11,9 @@
 @import "components/language-select", "components/coming-soon",
   "components/input-box", "components/radio-button", "components/select-box",
   "components/textarea", "components/check-box", "components/clause-box",
-  "components/grid", "components/spinner";
+  "components/grid", "components/spinner", "components/pagination",
+  "components/search-box", "components/confirm-button";
 
 @import "admin/layout/main";
+
+@import "admin/style/table_basic";
