@@ -61,6 +61,14 @@ table.table-basic--style {
         height: 200px;
         cursor: initial;
       }
+
+      td {
+        p.username {
+          &::before {
+            content: "@";
+          }
+        }
+      }
     }
   }
 }
