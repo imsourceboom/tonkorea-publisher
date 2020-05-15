@@ -1,0 +1,12 @@
+extends ../../_admin_layout
+include ../../components/editForm
+include ../../components/confirmButton
+
+block main
+    section#admin-board-edit
+        .container.edit
+            +editForm()
+            .flex.justify-center.mt-5
+                +confirmButton('삭제')
+                +confirmButton('수정')
+                +confirmButton('취소')

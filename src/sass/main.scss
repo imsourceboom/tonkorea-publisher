@@ -1,4 +1,4 @@
-@import "utils/var", "utils/mixins";
+@import "utils/var", "utils/mixins", "utils/custom_mixins";
 
 @import "base/reset", "base/typography", "base/base", "base/share";
 
@@ -12,7 +12,8 @@
   "components/input-box", "components/radio-button", "components/select-box",
   "components/textarea", "components/check-box", "components/clause-box",
   "components/grid", "components/spinner", "components/pagination",
-  "components/search-box", "components/confirm-button";
+  "components/search-box", "components/confirm-button", "components/edit-form",
+  "components/file-upload";
 
 @import "admin/layout/main";
 

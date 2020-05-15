@@ -6,7 +6,7 @@ section#detail {
   }
 
   .wrapper {
-    max-width: 1200px;
+    max-width: 920px;
     margin: 0 auto;
   }
 
@@ -209,7 +209,7 @@ section#detail {
 
   @media (min-width: $mobile) {
     & .container {
-      width: 80%;
+      // width: 80%;
 
       // padding: {
       //   top: 5rem;
@@ -247,7 +247,7 @@ section#detail {
 
   @media (min-width: $desktop) {
     & .container {
-      width: 66.666667%;
+      // width: 66.666667%;
 
       // padding: {
       //   top: 5.5rem;

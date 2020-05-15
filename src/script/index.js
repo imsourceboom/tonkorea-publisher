@@ -5,6 +5,8 @@ import "./hamburger";
 import "./languageSelect";
 import "./detail";
 import "./checkBox";
+import "./fileUpload";
+import "./fileCount";
 // import "./menu";
 
 // if ('serviceWorker' in navigator) {

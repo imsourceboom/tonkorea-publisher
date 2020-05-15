@@ -1,0 +1,104 @@
+@mixin sectionDefault() {
+    padding: 0 1rem 1rem;
+    width: 100%;
+    max-width: 1100px;
+
+    @include media(laptop) {
+        & {
+            padding-top: 1rem;
+            padding-bottom: 3rem;
+        }
+    }
+}
+
+@mixin customInput() {
+    font-size: 1rem;
+    height: 36px;
+    // border: 1px solid rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    transition: 0.5s;
+    // cursor: pointer;
+
+    // &:hover {
+    // border: 1px solid rgba(0, 0, 0, 0);
+    // box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+    // }
+}
+
+@mixin customButton($back: #fff, $color: null) {
+    font-size: 1rem;
+    height: 36px;
+    color: $color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    background-color: $back;
+    padding: 0.5rem 1rem;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        border: 1px solid rgba(0, 0, 0, 0);
+        box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+}
+
+@mixin customSelect() {
+    &::-ms-expand {
+        display: none;
+    }
+    -webkit-progress-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 1rem;
+    padding: 0.45rem 2.5rem 0.45rem 1rem;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+    color: rgba(0, 0, 0, 0.64);
+    background-color: #fff;
+    background-image: url('https://icongr.am/feather/chevron-down.svg?size=24&color=cccccc');
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    cursor: pointer;
+}
+
+@mixin customCheckbox($borderColor: rgba(0, 0, 0, 0.1), $checkColor: rgb(255, 59, 59)) {
+    display: none;
+
+    & + label {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        border: 1px solid $borderColor;
+        background-color: #fff;
+        border-radius: 0.25rem;
+        cursor: pointer;
+
+        span {
+            display: inline-block;
+            width: 10px;
+            height: 3px;
+            background-color: $checkColor;
+            opacity: 0;
+            transition: 0.5s;
+            transform: rotate(45deg) translate(0.2rem, 0.43rem);
+
+            &::after {
+                display: inline-block;
+                content: '';
+                width: 15px;
+                height: 3px;
+                background-color: $checkColor;
+                transform: rotate(90deg) translate(-1.2rem, -0.06rem);
+            }
+        }
+    }
+
+    &:checked + label {
+        span {
+            opacity: 1;
+        }
+    }
+}

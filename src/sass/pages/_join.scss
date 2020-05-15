@@ -6,7 +6,8 @@
   }
 }
 
-section#join {
+section#join,
+section.admin-member-edit {
   padding: 100px 0;
 
   @media (min-width: 768px) {

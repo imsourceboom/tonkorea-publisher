@@ -1,0 +1,17 @@
+include ./fileUpload
+
+mixin editForm(kind)
+    article.edit-form&attributes(attributes)
+        .top
+            label(for="title")
+                span 제목
+                div
+                input(id="title" type="text")
+            if kind === undefined
+                select
+                    option(value="") TON 블록체인
+                    option(value="") 뉴스
+        .errors 제목을 입력해 주세요.
+        .edit-box
+        .errors 제목을 입력해 주세요!
+        +fileUpload()

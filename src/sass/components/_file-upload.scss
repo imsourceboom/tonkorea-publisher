@@ -1,0 +1,266 @@
+#file-upload.attached-file {
+  .select-wrap {
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      margin-bottom: 0.5rem;
+    }
+
+    .upload-btn-wrapper {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+
+      figure.upload-btn {
+        display: flex;
+        border: 1px solid #92aab0;
+        color: #92aab0;
+        background-color: white;
+        padding: 0.4rem 1rem;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+
+        img {
+          width: 18px;
+          height: 18px;
+          opacity: 0.35;
+          margin-right: 0.3rem;
+        }
+      }
+    }
+
+    .count-wrap {
+      display: inline-block;
+      margin-left: 0.5rem;
+      font-size: 13px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  #dropZone,
+  ul#dropList {
+    width: 100%;
+    height: 132px;
+    color: #92aab0;
+    border: 2px dashed #92aab0;
+    margin: 0.6rem 0;
+    padding: 0.3rem 12px;
+    overflow-y: scroll;
+
+    li {
+      &:nth-child(odd) {
+        background-color: rgba(0, 0, 0, 0.03);
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.06);
+      }
+
+      p {
+        position: relative;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        // background-color: aqua;
+
+        span {
+          position: absolute;
+          right: 0;
+          opacity: 0.5;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.7;
+          }
+
+          img {
+            width: 20px;
+          }
+        }
+      }
+    }
+
+    table {
+      position: relative;
+      width: 100%;
+
+      td {
+        height: 28px;
+        // position: relative;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.6);
+
+        display: flex;
+        align-items: center;
+
+        input {
+          position: absolute;
+          right: 0;
+          cursor: pointer;
+          padding: 0.1rem 0.4rem;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          border-radius: 4px;
+          color: rgba(0, 0, 0, 0.5);
+          background-color: white;
+
+          &:hover {
+            color: rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+    }
+  }
+
+  #fileDragDesc {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: -5px;
+    padding: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 122px;
+    vertical-align: top;
+    display: none;
+
+    @media (min-width: 1440px) {
+      display: block;
+    }
+  }
+}
+#file-upload.attached-file {
+  .select-wrap {
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      margin-bottom: 0.5rem;
+    }
+
+    .upload-btn-wrapper {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+
+      figure.upload-btn {
+        display: flex;
+        border: 1px solid #92aab0;
+        color: #92aab0;
+        background-color: white;
+        padding: 0.4rem 1rem;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+
+        img {
+          width: 18px;
+          height: 18px;
+          opacity: 0.35;
+          margin-right: 0.3rem;
+        }
+      }
+    }
+
+    .count-wrap {
+      display: inline-block;
+      margin-left: 0.5rem;
+      font-size: 13px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  #dropZone,
+  ul#dropList {
+    width: 100%;
+    height: 132px;
+    color: #92aab0;
+    border: 2px dashed #92aab0;
+    margin: 0.6rem 0;
+    padding: 0.3rem 12px;
+    overflow-y: scroll;
+
+    li {
+      &:nth-child(odd) {
+        background-color: rgba(0, 0, 0, 0.03);
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.06);
+      }
+
+      p {
+        position: relative;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        // background-color: aqua;
+
+        span {
+          position: absolute;
+          right: 0;
+          opacity: 0.5;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.7;
+          }
+
+          img {
+            width: 20px;
+          }
+        }
+      }
+    }
+
+    table {
+      position: relative;
+      width: 100%;
+
+      td {
+        height: 28px;
+        // position: relative;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.6);
+
+        display: flex;
+        align-items: center;
+
+        input {
+          position: absolute;
+          right: 0;
+          cursor: pointer;
+          padding: 0.1rem 0.4rem;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          border-radius: 4px;
+          color: rgba(0, 0, 0, 0.5);
+          background-color: white;
+
+          &:hover {
+            color: rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+    }
+  }
+
+  #fileDragDesc {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: -5px;
+    padding: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 122px;
+    vertical-align: top;
+    display: none;
+
+    @media (min-width: 1440px) {
+      display: block;
+    }
+  }
+}

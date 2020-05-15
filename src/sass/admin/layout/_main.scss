@@ -93,6 +93,12 @@ main#admin-main {
 
     .container {
       min-height: 100vh;
+
+      &.edit {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 50px 0 50px;
+      }
     }
   }
 }

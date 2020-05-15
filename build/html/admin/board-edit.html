@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detaction" content="telephone=no, address=no, email=no">
+    <meta name="referrer" content="strict-origin">
+    <meta name="title" content="TON KOREA ADMIN">
+    <meta name="description" content="for TON KOREA ADMIN">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="/assets/images/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <title>TON KOREA ADMIN</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="preload" href="//fonts.googleapis.com/css?family=Titillium+Web:400,700|Noto+Sans+KR:100,400,500" as="font" crossorigin="crossorigin">
+    <script src="https://polyfill.io/v3/polyfill.min.js?flags=gated" async defer> </script>
+    <script src="/js/app.js" defer></script>
+  </head>
+  <body>
+    <main id="admin-main">
+      <nav id="admin-nav">
+        <hgroup>
+          <h3>TON KOREA - ADMIN</h3>
+        </hgroup>
+        <!-- 해당 메뉴 li 태그에 active 클래스 추가-->
+        <ul>
+          <li class="active"><a href="/html/admin/board.html">게시판 관리</a></li>
+          <li><a href="/html/admin/member.html">회원관리</a></li>
+        </ul>
+      </nav>
+      <section id="admin-board-edit">
+        <div class="container edit">
+          <article class="edit-form">
+            <div class="top">
+              <label for="title"><span>제목</span>
+                <div></div>
+                <input id="title" type="text"/>
+              </label>
+              <select>
+                <option value="">TON 블록체인</option>
+                <option value="">뉴스</option>
+              </select>
+            </div>
+            <div class="errors">제목을 입력해 주세요.</div>
+            <div class="edit-box"></div>
+            <div class="errors">제목을 입력해 주세요!</div>
+            <article class="attached-file" id="file-upload">
+              <div class="select-wrap">
+                <label class="upload-btn-wrapper" for="input_file_1">
+                  <input class="file-button-1" type="file" multiple="multiple" hidden="hidden" id="input_file_1"/>
+                  <figure class="upload-btn"><img src="/assets/images/symbols/clip.svg" alt=""/>
+                    <figcaption>파일선택</figcaption>
+                  </figure>
+                </label>
+                <div class="count-wrap"></div>
+              </div>
+              <ul id="dropList">
+                <li>
+                  <p>파일네임<span class="noticeFileDel"><img src="/assets/images/symbols/close.svg" alt=""/></span></p>
+                </li>
+                <li>
+                  <p>파일네임<span class="noticeFileDel"><img src="/assets/images/symbols/close.svg" alt=""/></span></p>
+                </li>
+                <li>
+                  <p>파일네임<span class="noticeFileDel"><img src="/assets/images/symbols/close.svg" alt=""/></span></p>
+                </li>
+                <li>
+                  <p>파일네임<span class="noticeFileDel"><img src="/assets/images/symbols/close.svg" alt=""/></span></p>
+                </li>
+                <li>
+                  <p>파일네임<span class="noticeFileDel"><img src="/assets/images/symbols/close.svg" alt=""/></span></p>
+                </li>
+                <li>
+                  <p>파일네임<span class="noticeFileDel"><img src="/assets/images/symbols/close.svg" alt=""/></span></p>
+                </li>
+              </ul>
+            </article>
+          </article>
+          <div class="flex justify-center mt-5">
+            <div class="confirm-button">삭제</div>
+            <div class="confirm-button">수정</div>
+            <div class="confirm-button">취소</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
