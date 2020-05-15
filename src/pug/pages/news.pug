@@ -6,7 +6,7 @@ block main
             h2 뉴스
             .filter
                 // 해당 div에 active 클래스 추가
-                div.active TON 블록체인
+                div.active 업데이트
                 div 미디어
             article.blockchain
                 - var n = 0;
@@ -21,6 +21,7 @@ block main
                                 .contents-wrap
                                     .title 제목 부분입니다. 제목 부분을 일부러 길게 쓰고 있습니다. 디바이스 테스트를 위해 길게 씁니다. 길게 씁니다.
                                     .date 2020.05.13
+                                        img(src="/assets/images/symbols/clip.svg", alt="")
             include ../components/grid
             .loading-wrap
                 include ../components/spinner
