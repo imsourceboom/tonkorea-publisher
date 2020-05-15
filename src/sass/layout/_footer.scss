@@ -31,7 +31,7 @@ footer {
     margin: 0 auto;
 
     @media (min-width: 1366px) {
-      max-width: initial;
+      // max-width: initial;
     }
 
     li {
@@ -45,7 +45,7 @@ footer {
       }
 
       @media (min-width: 1366px) {
-        width: initial;
+        width: inherit;
         flex: 1;
         margin-right: 70px;
 
@@ -55,6 +55,10 @@ footer {
 
         &:nth-child(even) {
           text-align: left;
+        }
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          width: 80px;
         }
       }
 
