@@ -7,7 +7,11 @@ block main
     section#admin-board
         .container
             form(action="")
-                .flex.justify-end.mb-07
+                .flex.justify-between.align-center.mb-07
+                    // 해당 메뉴에 active 클래스 추가
+                    ul.menu-selector
+                        li.active TON 블록체인
+                        li 미디어
                     +searchBox('검색')
                 table.table-basic--style
                     thead

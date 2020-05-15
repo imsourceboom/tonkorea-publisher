@@ -1,0 +1,22 @@
+section#admin-board {
+  ul.menu-selector {
+    li {
+      display: inline-block;
+      opacity: 0.5;
+      margin-right: 30px;
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        opacity: 0.75;
+      }
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}

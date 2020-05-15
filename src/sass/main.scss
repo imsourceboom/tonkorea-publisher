@@ -8,6 +8,8 @@
   "pages/participate", "pages/members", "pages/community", "pages/login",
   "pages/join", "pages/clause", "pages/detail";
 
+@import "admin/pages/board";
+
 @import "components/language-select", "components/coming-soon",
   "components/input-box", "components/radio-button", "components/select-box",
   "components/textarea", "components/check-box", "components/clause-box",
