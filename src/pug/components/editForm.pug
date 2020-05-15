@@ -12,6 +12,7 @@ mixin editForm(kind)
                     option(value="") 업데이트
                     option(value="") 뉴스
         .errors 제목을 입력해 주세요.
+        +fileUpload('대표이미지', false, false)
         .edit-box
         .errors 제목을 입력해 주세요!
-        +fileUpload()
+        +fileUpload('파일선택', true, true)
