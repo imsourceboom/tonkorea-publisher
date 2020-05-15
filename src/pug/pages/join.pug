@@ -18,21 +18,21 @@ block main
                 li
                     .title 이름
                     .description
-                        +inputBox().mb-0(style="max-width: 256px;")
+                        +inputBox('text').mb-0(style="max-width: 256px;")
                 li
                     .title 이메일 주소
                     .description
-                        +inputBox().mb-0(style="max-width: 256px;")
-                li
+                        +inputBox('email').mb-0(style="max-width: 256px;")
+                li.phone-number
                     .title 전화번호
                     .description
                         +selectBox('010', '011', '016', '019').mr-05
-                        +inputBox().mb-0(style="max-width: 80px;").mr-05
-                        +inputBox().mb-0(style="max-width: 80px;")
+                        +inputBox('text').mb-0(style="max-width: 80px;").mr-05
+                        +inputBox('text').mb-0(style="max-width: 80px;")
                 li
                     .title 텔레그램 사용자명
                     .description
-                        +inputBox().mb-0(style="max-width: 256px;")
+                        +inputBox('text').mb-0(style="max-width: 256px;")
                 li.country
                     .title 국적
                     .description
