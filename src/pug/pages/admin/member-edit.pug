@@ -67,6 +67,6 @@ block main
                                 +inputBox('text', null, null, null, true)
                             p.annotation *복수선택 가능
             .flex.justify-center.mt-5
-                +confirmButton('삭제')
-                +confirmButton('수정')
+                +confirmButton('삭제').delete
+                +confirmButton('수정').revise
                 +confirmButton('취소')
