@@ -185,12 +185,12 @@ header {
           &:first-child {
             padding-bottom: 7px;
             margin-right: 40px;
-            border-bottom: 1px solid #aaa;
+            // border-bottom: 1px solid #aaa;
             opacity: 1;
           }
 
           .sign-in {
-            color: #0088cc;
+            // color: #0088cc;
 
             a {
               &:first-child {
@@ -223,6 +223,63 @@ header {
             margin-bottom: 0;
           }
         }
+      }
+    }
+  }
+
+  .telegram-login-wrapper {
+    position: relative;
+    width: 60px;
+    height: 24px;
+    border-radius: 20px;
+    // border: 1px solid #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+
+    & * {
+      cursor: pointer;
+    }
+
+    &::before {
+      content: "로그인";
+      color: #0088cc;
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      position: absolute;
+      top: 50%;
+      // left:14px;
+      transform: translate(0, -50%);
+      font-weight: bold;
+      background-image: url("/assets/images/sns/telegram.svg");
+      background-size: 20px;
+      background-position: 0 center;
+      background-repeat: no-repeat;
+      padding-left: 24px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    // &::after {
+    //   content: "으로 로그인하기";
+    //   display: inline-block;
+    //   height: 40px;
+    //   line-height: 40px;
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 114px;
+    //   transform: translate(0, -50%);
+    //   font-size: 13px;
+    // }
+
+    iframe {
+      opacity: 0;
+      cursor: pointer;
+
+      & * {
+        cursor: pointer;
       }
     }
   }
