@@ -229,13 +229,13 @@ header {
 
   .telegram-login-wrapper {
     position: relative;
-    width: 60px;
+    width: 65px;
     height: 24px;
     border-radius: 20px;
     // border: 1px solid #aaa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     overflow: hidden;
     cursor: pointer;
 
@@ -276,7 +276,13 @@ header {
 
     iframe {
       opacity: 0;
+      // background-color: red;
       cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
       & * {
         cursor: pointer;
