@@ -167,6 +167,54 @@ section#detail {
       }
     }
 
+    article.attached-file {
+      margin-top: 3rem;
+
+      hgroup {
+        display: flex;
+        align-items: center;
+        opacity: 0.55;
+
+        img {
+          margin-right: 0.3rem;
+        }
+      }
+
+      ul.file-box {
+        background-color: rgba(249, 248, 248, 1);
+        padding: 0.5rem 0.8rem;
+        margin-top: 0.5rem;
+
+        li {
+          display: flex;
+          margin-bottom: 0.5rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          a {
+            display: flex;
+            align-items: center;
+
+            &:hover span {
+              color: rgba(0, 0, 0, 0.67);
+            }
+
+            img {
+              max-width: 17px;
+              margin-right: 0.5rem;
+            }
+
+            span {
+              font-size: 14px;
+              color: rgba(0, 0, 0, 0.4);
+            }
+          }
+        }
+      }
+    }
+
     .buttons {
       position: relative;
       padding-top: 2rem;
@@ -229,7 +277,7 @@ section#detail {
       }
 
       .buttons {
-        padding-top: 4rem;
+        padding-top: 3.35rem;
 
         .alert {
           height: 37px;
