@@ -228,65 +228,65 @@ header {
   }
 
   .telegram-login-wrapper {
-    position: relative;
-    width: 65px;
-    height: 24px;
-    border-radius: 20px;
-    // border: 1px solid red;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    overflow: hidden;
-    cursor: pointer;
+    // position: relative;
+    // width: 65px;
+    // height: 24px;
+    // border-radius: 20px;
+    // // border: 1px solid red;
+    // // display: flex;
+    // // justify-content: center;
+    // // align-items: center;
+    // overflow: hidden;
+    // cursor: pointer;
 
-    & * {
-      cursor: pointer;
-    }
+    // & * {
+    //   cursor: pointer;
+    // }
 
-    &::before {
-      content: "로그인";
-      color: #0088cc;
-      display: inline-block;
-      height: 40px;
-      line-height: 40px;
-      position: absolute;
-      top: 50%;
-      // left:14px;
-      transform: translate(0, -50%);
-      font-weight: bold;
-      background-image: url("/assets/images/sns/telegram.svg");
-      background-size: 20px;
-      background-position: 0 center;
-      background-repeat: no-repeat;
-      padding-left: 24px;
-      font-size: 13px;
-      cursor: pointer;
-    }
-    // &::after {
-    //   content: "으로 로그인하기";
+    // &::before {
+    //   content: "로그인";
+    //   color: #0088cc;
     //   display: inline-block;
     //   height: 40px;
     //   line-height: 40px;
     //   position: absolute;
     //   top: 50%;
-    //   left: 114px;
+    //   // left:14px;
     //   transform: translate(0, -50%);
+    //   font-weight: bold;
+    //   background-image: url("/assets/images/sns/telegram.svg");
+    //   background-size: 20px;
+    //   background-position: 0 center;
+    //   background-repeat: no-repeat;
+    //   padding-left: 24px;
     //   font-size: 13px;
+    //   cursor: pointer;
     // }
+    // // &::after {
+    // //   content: "으로 로그인하기";
+    // //   display: inline-block;
+    // //   height: 40px;
+    // //   line-height: 40px;
+    // //   position: absolute;
+    // //   top: 50%;
+    // //   left: 114px;
+    // //   transform: translate(0, -50%);
+    // //   font-size: 13px;
+    // // }
 
-    iframe {
-      opacity: 0;
-      // background-color: red;
-      cursor: pointer;
-      display: inline-block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    // iframe {
+    //   opacity: 0;
+    //   // background-color: red;
+    //   cursor: pointer;
+    //   display: inline-block;
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
 
-      & * {
-        cursor: pointer;
-      }
-    }
+    //   & * {
+    //     cursor: pointer;
+    //   }
+    // }
   }
 }
