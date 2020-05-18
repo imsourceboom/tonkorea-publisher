@@ -7,6 +7,8 @@ import "./detail";
 import "./checkBox";
 import "./fileUpload";
 import "./fileCount";
+import "./agentCheck";
+import "./ieCaution";
 // import "./menu";
 
 // if ('serviceWorker' in navigator) {

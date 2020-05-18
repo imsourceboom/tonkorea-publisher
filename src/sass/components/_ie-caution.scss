@@ -1,0 +1,14 @@
+.ie-caution-wrapper {
+  display: none;
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: lightsalmon;
+  padding: 0.5rem 0.8rem;
+  border-radius: 3px;
+
+  a {
+    text-decoration: underline;
+  }
+}
