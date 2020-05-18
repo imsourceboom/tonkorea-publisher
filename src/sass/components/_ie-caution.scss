@@ -1,8 +1,9 @@
 .ie-caution-wrapper {
   display: none;
   position: fixed;
-  top: 100px;
+  top: 150px;
   left: 50%;
+  z-index: 100;
   transform: translate(-50%, 0);
   background-color: lightsalmon;
   padding: 0.5rem 0.8rem;
