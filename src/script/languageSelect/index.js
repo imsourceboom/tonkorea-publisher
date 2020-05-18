@@ -56,7 +56,7 @@ if (languageSelect !== null) {
 document.addEventListener("DOMContentLoaded", function () {
   const browser = browserCheck();
 
-  if (browser == "chrome") {
+  if (browser == "ie") {
     const languages = [
       {
         name: "한국어",
