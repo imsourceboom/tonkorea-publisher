@@ -32,5 +32,12 @@ h6 {
 select {
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
+  -moz-appearance: none;
+  -moz-border-radius: 0px;
   border-radius: 0px;
+  appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
 }

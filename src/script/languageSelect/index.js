@@ -56,14 +56,14 @@ if (languageSelect !== null) {
 document.addEventListener("DOMContentLoaded", function () {
   const browser = browserCheck();
 
-  if (browser == "ie") {
+  if (browser == "chrome") {
     const languages = [
       {
-        name: "🇰🇷한국어",
+        name: "한국어",
         data: "korean",
       },
       {
-        name: "🇬🇧영어",
+        name: "영어",
         data: "english",
       },
     ];
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     ieSelect.style.cssText =
-      "font-size: 14px; border: none; background-color: white; margin-top: -3px;";
+      "font-size: 14px; border: none; background-color: white; margin-top: -3px; cursor: pointer;";
 
     languageSelect.map((selector) => {
       selector.outerHTML = ieSelect.outerHTML;
