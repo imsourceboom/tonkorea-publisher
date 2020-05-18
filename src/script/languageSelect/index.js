@@ -1,3 +1,5 @@
+import { browserCheck } from "../agentCheck";
+
 const languageSelect = Array.from(
   document.querySelectorAll(".language-select")
 );
@@ -49,3 +51,38 @@ if (languageSelect !== null) {
     });
   });
 }
+
+// ie 전용 언어 선택
+document.addEventListener("DOMContentLoaded", function () {
+  const browser = browserCheck();
+
+  if (browser == "chrome") {
+    const languages = [
+      {
+        name: "🇰🇷한국어",
+        data: "korean",
+      },
+      {
+        name: "🇬🇧영어",
+        data: "english",
+      },
+    ];
+
+    const ieSelect = document.createElement("select");
+
+    languages.map((lang) => {
+      const option = document.createElement("option");
+
+      option.textContent = lang.name;
+      option.setAttribute("data-country", lang.data);
+      ieSelect.appendChild(option);
+    });
+
+    ieSelect.style.cssText =
+      "font-size: 14px; border: none; background-color: white; margin-top: -3px;";
+
+    languageSelect.map((selector) => {
+      selector.outerHTML = ieSelect.outerHTML;
+    });
+  }
+});
