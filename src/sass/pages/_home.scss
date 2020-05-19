@@ -74,6 +74,10 @@ section#home {
 
     @media (min-width: 1024px) {
       padding: 0px $commonPadding + 10px 140px;
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        padding: 130px $commonPadding + 10px 140px;
+      }
     }
 
     .wrapper {
@@ -158,6 +162,10 @@ section#home {
 
     @media (min-width: 1024px) {
       padding: 250px $commonPadding + 10px;
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        padding: 200px $commonPadding + 10px 250px;
+      }
     }
 
     .wrapper {
