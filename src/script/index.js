@@ -1,3 +1,4 @@
+import "./polyfill";
 import "./smoothscroll";
 import "./join";
 // import "./scrollreveal";
