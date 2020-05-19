@@ -9,7 +9,7 @@ import "./fileUpload";
 import "./fileCount";
 import "./agentCheck";
 import "./ieCaution";
-import "./telegramBtn";
+// import "./telegramBtn";
 // import "./menu";
 
 // if ('serviceWorker' in navigator) {
