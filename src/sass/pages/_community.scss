@@ -8,6 +8,10 @@ section#community {
     margin: 0 auto;
     max-width: 1024px;
 
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      max-width: 1130px;
+    }
+
     h2 {
       color: #0088cc;
       text-align: center;
