@@ -362,6 +362,10 @@ section#home {
       padding: 15px 20px;
     }
 
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      position: fixed;
+    }
+
     .wrapper {
       display: flex;
       align-items: center;
