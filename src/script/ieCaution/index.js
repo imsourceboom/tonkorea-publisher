@@ -5,6 +5,8 @@ const browser = browserCheck();
 
 document.addEventListener("DOMContentLoaded", function () {
   if (browser == "ie") {
-    cautionWrapper.style.display = "block";
+    if (cautionWrapper !== null) {
+      cautionWrapper.style.display = "block";
+    }
   }
 });
