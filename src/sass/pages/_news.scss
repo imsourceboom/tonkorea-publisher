@@ -94,6 +94,11 @@ section#news {
                 height: 16px;
                 margin-left: 11px;
                 opacity: 0.6;
+
+                @media all and (-ms-high-contrast: none),
+                  (-ms-high-contrast: active) {
+                  margin-top: 0;
+                }
               }
             }
           }
