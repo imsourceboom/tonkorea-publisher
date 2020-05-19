@@ -9,10 +9,10 @@
   padding: 0.7rem 2.7rem 0.7rem 0.8rem;
   text-align: center;
   border-radius: 3px;
-  width: 335px;
+  width: 382px;
 
   @media (min-width: 768px) {
-    width: 566px;
+    width: 639px;
 
     br {
       display: none;
@@ -25,17 +25,17 @@
 
   .close {
     position: absolute;
-    right: 7px;
-    top: 10px;
+    right: 10px;
+    top: 8px;
     width: 18px;
     height: 18px;
     cursor: pointer;
 
     @media (min-width: 768px) {
-      right: 7px;
+      right: 13px;
       top: 50%;
       transform: translate(0, -50%);
-      margin-top: -1px;
+      margin-top: -3px;
     }
   }
 }
