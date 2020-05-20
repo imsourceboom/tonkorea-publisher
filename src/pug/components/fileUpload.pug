@@ -5,13 +5,13 @@ mixin fileUpload(name, multiple, list)
                 label(for="input_file_1").upload-btn-wrapper
                     input(type="file" multiple="multiple" hidden)#input_file_1.file-button-1
                     figure.upload-btn
-                        img(src="/assets/images/symbols/clip.svg", alt="clip icon")
+                        img(src="https://icongr.am/clarity/paperclip.svg?size=16&color=000000", alt="")
                         figcaption= name
             else
                 label(for="input_file_2").upload-btn-wrapper
                     input(type="file" hidden)#input_file_2.file-button-2
                     figure.upload-btn
-                        img(src="/assets/images/symbols/clip.svg", alt="clip icon")
+                        img(src="https://icongr.am/clarity/paperclip.svg?size=16&color=000000", alt="")
                         figcaption= name
             .count-wrap
         if list
