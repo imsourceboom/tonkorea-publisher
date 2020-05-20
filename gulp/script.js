@@ -21,7 +21,16 @@ const jsSet = () => {
                 use: {
                   loader: "babel-loader",
                   options: {
-                    presets: ["@babel/preset-env"],
+                    presets: [
+                      [
+                        "@babel/preset-env",
+                        {
+                          targets: {
+                            browsers: ["> 1%", "last 2 versions", "ie >= 11"],
+                          },
+                        },
+                      ],
+                    ],
                   },
                 },
               },
