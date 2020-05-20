@@ -60,7 +60,7 @@ section#detail {
         }
       }
 
-      a {
+      a.original-view {
         height: 33px;
         line-height: 33px;
         font-size: 0.85rem;
@@ -70,6 +70,20 @@ section#detail {
         border: 1px solid rgb(103, 103, 103);
         border-radius: 4px;
         cursor: pointer;
+      }
+
+      a.attach-move {
+        display: flex;
+        font-size: 0.85rem;
+
+        &::after {
+          content: "▾";
+          margin-left: 3px;
+        }
+
+        img {
+          margin-right: 3px;
+        }
       }
     }
 
