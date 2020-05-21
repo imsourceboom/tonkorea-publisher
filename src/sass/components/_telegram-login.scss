@@ -1,4 +1,6 @@
 .telegram-login-component {
+  display: flex;
+  align-items: center;
   margin-right: 25px;
 
   @media (min-width: 1024px) {
