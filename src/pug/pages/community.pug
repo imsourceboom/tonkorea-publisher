@@ -1,8 +1,10 @@
 extends ../_layout
+include ../components/comingSoon
 
 block main
     section#community
-        .wrapper
+        +comingSoon('커뮤니티')
+        //- .wrapper
             h2 커뮤니티
             ul
                 -
