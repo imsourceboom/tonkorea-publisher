@@ -8,7 +8,9 @@
   }
 
   .login-wrapper {
-    width: 172px;
+    // width: 172px;
+    // height: 28px;
+    width: 100px;
     height: 28px;
     position: relative;
     display: flex;
@@ -37,7 +39,7 @@
     }
 
     &::after {
-      content: "텔레그램 로그인";
+      content: "로그인";
       font-size: 13px;
 
       @media (min-width: 768px) {
