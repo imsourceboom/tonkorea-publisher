@@ -7,6 +7,48 @@
     margin-right: 40px;
   }
 
+  .login-wrapper {
+    width: 172px;
+    height: 28px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #0088cc;
+    border-radius: 100px;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 21px;
+      height: 21px;
+      background-image: url("/assets/images/sns/telegram.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 7px;
+
+      @media (min-width: 768px) {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    &::after {
+      content: "텔레그램 로그인";
+      font-size: 14px;
+
+      @media (min-width: 768px) {
+        font-size: 15px;
+      }
+    }
+
+    & > iframe {
+      opacity: 0;
+    }
+  }
+
   figure.profile-wrapper {
     display: flex;
     align-items: center;
