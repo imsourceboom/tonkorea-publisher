@@ -16,34 +16,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #0088cc;
+    // border: 1px solid #0088cc;
     border-radius: 100px;
+    background-color: #039be5;
     cursor: pointer;
 
+    $size: 24;
     &::before {
       content: "";
       display: inline-block;
-      width: 21px;
-      height: 21px;
+      width: $size + px;
+      height: $size + px;
       background-image: url("/assets/images/sns/telegram.svg");
-      background-size: 21px;
+      background-size: $size + px;
       background-repeat: no-repeat;
       background-position: center;
-      margin-right: 7px;
+      margin-right: 4px;
+      margin-top: -1px;
 
       @media (min-width: 768px) {
-        width: 22px;
-        height: 22px;
-        background-size: 22px;
+        width: $size + px;
+        height: $size + px;
+        background-size: $size + px;
       }
     }
 
     &::after {
       content: "로그인";
-      font-size: 13px;
+      font-size: 12px;
+      line-height: 1;
+      color: white;
+      margin-top: 4px;
 
       @media (min-width: 768px) {
-        font-size: 14px;
+        font-size: 13px;
+        margin-top: 2px;
       }
     }
 
