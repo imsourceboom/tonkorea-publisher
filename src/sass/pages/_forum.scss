@@ -86,10 +86,39 @@ section#forum {
       }
     }
 
+    .queue-filter {
+      padding: 22px 0 9px;
+
+      span {
+        opacity: 0.5;
+        margin-right: 16px;
+        font-size: 0.88em;
+        cursor: pointer;
+
+        &.active {
+          opacity: 1;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
     table.board {
       width: 100%;
       margin: 0 0 10px;
       font-size: 0.975em;
+
+      tbody {
+        tr {
+          cursor: pointer;
+
+          &:hover {
+            background-color: rgba(75, 207, 250, 0.06);
+          }
+        }
+      }
 
       th,
       td {

@@ -43,9 +43,6 @@
                 <!-- 로그인 전 (telegram login script를 login-wrapper 클래스 안에 넣는다)-->
                 <div class="login-wrapper"></div>
                 <!-- 로그인 후-->
-                <!-- figure.profile-wrapper-->
-                <!--     img(src="https://femiwiki-uploaded-files-thumb.s3.amazonaws.com/2/27/%ED%8C%8C%EB%B2%A8.jpg/300px-%ED%8C%8C%EB%B2%A8.jpg", alt="")-->
-                <!--     figcaption UserName-->
               </div>
               <button class="language-select" type="button"><img src="https://icongr.am/clarity/world.svg?size=18&amp;color=b40d1c" alt="language">
                 <ul>
@@ -144,12 +141,16 @@
               </ul>
             </div>
           </div>
+          <div class="queue-filter">
+            <!-- default 최신순-->
+            <!-- 선택 태그에 active 클래스 추가--><span class="latest active">•최신순</span><span class="viewed">•조회수순</span>
+          </div>
           <table class="board">
             <thead>
               <tr>
                 <th>주제</th>
                 <th class="views">조회수</th>
-                <th class="created">작성일</th>
+                <th class="written">작성일</th>
               </tr>
             </thead>
             <tbody>

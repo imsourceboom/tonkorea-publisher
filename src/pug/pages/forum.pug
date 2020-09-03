@@ -24,12 +24,17 @@ block main
                         li.item.active 중분류 카테고리
                         - for (var i = 0; i < 15; i++)
                             li.item 중분류 카테고리
+            .queue-filter
+                // default 최신순
+                // 선택 태그에 active 클래스 추가
+                span.latest.active •최신순
+                span.viewed •조회수순
             table.board
                 thead
                     tr
                         th 주제
                         th.views 조회수
-                        th.created 작성일
+                        th.written 작성일
                 tbody
                     - for (var i = 0; i < 10; i++)
                         tr
