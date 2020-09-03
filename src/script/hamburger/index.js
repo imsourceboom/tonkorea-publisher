@@ -16,4 +16,5 @@ if (header !== null) {
 
   hamburger.addEventListener("click", trigger);
   close.addEventListener("click", trigger);
+  mobileNavBack.addEventListener("click", trigger);
 }

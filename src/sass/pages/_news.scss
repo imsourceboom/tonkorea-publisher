@@ -1,7 +1,7 @@
 section#news {
   padding: 100px 1rem;
 
-  @media (min-width: 1366px) {
+  @media (min-width: 1024px) {
     padding: 150px 0;
   }
 
@@ -15,7 +15,6 @@ section#news {
       margin-bottom: 60px;
 
       @media (min-width: 1024px) {
-        margin-left: 10px;
         margin-bottom: 80px;
       }
     }
