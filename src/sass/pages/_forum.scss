@@ -232,6 +232,13 @@ section#forum {
           &:hover {
             background-color: rgba(75, 207, 250, 0.06);
           }
+
+          &.empty {
+            td {
+              padding: 100px 0;
+              text-align: center;
+            }
+          }
         }
       }
 

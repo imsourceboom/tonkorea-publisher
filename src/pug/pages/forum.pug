@@ -1,6 +1,5 @@
 extends ../_layout
 include ../components/comingSoon
-include ../components/searchBox
 
 block main
     section#forum
@@ -8,7 +7,6 @@ block main
         .wrapper
             h2 토론
             .category.window
-                //- +searchBox('카테고리 검색')
                 label.search--box-component
                     input(type="text" placeholder='카테고리 검색')
                     input(type="submit" value="")
@@ -71,6 +69,8 @@ block main
                         th.views 조회수
                         th.written 작성일
                 tbody
+                    tr.empty
+                        td(colspan='3') 게시글이 존재하지 않습니다.
                     - for (var i = 0; i < 10; i++)
                         tr
                             td

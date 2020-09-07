@@ -1,19 +1,25 @@
 extends ../_layout
+include ../components/comingSoon
 
 block main
-    section#detail
-        .wrapper 
+    section#forum-post
+        //- +comingSoon('토론')
+        .wrapper
             article.container.contents-box
                 .title 광고없는 텔레그램 사용자 2억명 돌파, 그 이후 제목의 길이를 길게하는 작업을 해보자
+                    ul.hash 
+                        li 카테고리
+                        li 카테고리
                 .profile
                     .info
-                        //- .logo
-                            img(src="/assets/images/image/project/telegram.png", alt="")
+                        .logo
+                            //- img(src="/assets/images/image/project/telegram.png", alt="")
                         .author
-                            //- .name 개발자뉴스
-                            .date 2018년 11월 12일
+                            .name imsexybomb
+                            //- .date 2018년 11월 12일
                     //- a(href="").original-view 원문보기
-                    a(href="#attach-box" data-scroll).attach-move
+                    .date 2018년 11월 12일
+                    //- a(href="#attach-box" data-scroll).attach-move
                         img(src="https://icongr.am/clarity/paperclip.svg?size=16&color=000000", alt="")
                         | 첨부파일
                 .description
@@ -70,3 +76,5 @@ block main
                     //- input(type="hidden")#input-url
                     //- button.share.btn-copy 공유하기
                     button.list-view 목록보기
+                .replies-wrap
+                    
