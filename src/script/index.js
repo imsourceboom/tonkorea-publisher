@@ -10,6 +10,8 @@ import "./fileUpload";
 import "./fileCount";
 import "./agentCheck";
 import "./ieCaution";
+import "./viewComma";
+import "./category";
 // import "./telegramBtn";
 // import "./menu";
 

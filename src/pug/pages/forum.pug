@@ -7,23 +7,58 @@ block main
         //- +comingSoon('토론')
         .wrapper
             h2 토론
-            .category
-                +searchBox('카테고리 검색')
-                // 선택된 카테고리는 li item class 태그에 active 클래스가 붙는다.
-                // 첫 진입 페이지에서는 'box, top' 클래스가 붙은 ul 태그의 첫번째 li에 active 클래스가 붙어 있다.
-                .bundle
-                    // 대분류 카테고리
-                    ul.box.top
-                        li.item.active All
-                        - for (var i = 0; i < 15; i++)
-                            li.item 대분류 카테고리
-                .bundle
-                    // 중분류 카테고리
-                    // 대분류 카테고리들 중에 중분류 카테고리가 있을 경우에 화면에 나타난다.
-                    ul.box.middle
-                        li.item.active 중분류 카테고리
-                        - for (var i = 0; i < 15; i++)
-                            li.item 중분류 카테고리
+            .category.window
+                //- +searchBox('카테고리 검색')
+                label.search--box-component
+                    input(type="text" placeholder='카테고리 검색')
+                    input(type="submit" value="")
+                    ul.list
+                        li.search-item 검색 결과물
+                        li.search-item 검색 결과물
+                        li.search-item 검색 결과물
+                        li.search-item 검색 결과가 없습니다
+                        li.search-item 검색 결과물
+                        li.search-item 검색 결과물
+                        li.search-item 검색 결과물
+                        li.search-item 검색 결과가 없습니다
+                        li.search-item 검색 결과물
+                        li.search-item 검색 결과물
+                        li.search-item 검색 결과물
+                        li.search-item 검색 결과가 없습니다
+                .category-button.top
+                    .icon
+                    p.name 카테고리
+                    ul.list
+                        li.category-item 컨테스트
+                            span 10
+                        li.category-item 거버넌스
+                            span 10
+                        li.category-item 봇
+                            span 10
+                        li.category-item Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laborum tempora iure eligendi dolor et illo doloremque. Labore, beatae explicabo!
+                            span 10
+                        li.category-item 거버넌트트트트트트트트트트트트
+                            span 10
+                        li.category-item 봇
+                            span 10
+                        li.category-item 거버넌스
+                            span 10
+                        li.category-item 봇
+                            span 10
+                        li.category-item 컨테스트
+                            span 10
+                        li.category-item 거버넌스
+                            span 10
+                        li.category-item 봇
+                            span 10
+                .category-button.middle
+                    .icon
+                    p.name 카테고리
+                    ul.list
+                        li.category-item 개발 컨테스트
+                            span 999
+                        li.category-item 번역 컨테스트
+                            span 888
             .queue-filter
                 // default 최신순
                 // 선택 태그에 active 클래스 추가
@@ -41,7 +76,7 @@ block main
                             td
                                 .title Contest Proposal: Free TON Visual Brand Communication Contest Part IV. Non-animated StickersFree TON Visual Brand Communication Contest Part IV.
                                 .hash 중분류 카테고리
-                            td.views 9999
+                            td.views.comma 9999
                             td.written 20.09.03
             .loading-wrap
                 include ../components/spinner

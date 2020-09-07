@@ -1,17 +1,12 @@
 export const osCheck = () => {
   const agent = navigator.userAgent.toLocaleLowerCase();
   // OS 식별
-  if (agent.indexOf("windows nt 5.1") >= 0) return "windows";
-  else if (agent.indexOf("windows nt 6.0") >= 0) return "windows";
-  else if (agent.indexOf("windows nt 6.1") >= 0) return "windows";
-  else if (agent.indexOf("windows nt 6.3") >= 0) return "windows";
-  else if (agent.indexOf("windows phone 8.1") >= 0) return "windows";
-  else if (agent.indexOf("windows PHONE 10.0") >= 0) return "windows";
+  if (agent.indexOf("windows") >= 0) return "windows";
+  else if (agent.indexOf("macintosh") >= 0) return "mac";
   else if (agent.indexOf("android") >= 0) return "android";
   else if (agent.indexOf("iphone") >= 0) return "iPhone";
   else if (agent.indexOf("ipad") >= 0) return "iPad";
   else if (agent.indexOf("ipod") >= 0) return "iPod";
-  else if (agent.indexOf("mac") >= 0) return "mac";
   else return agent;
 };
 
@@ -33,5 +28,13 @@ export const browserCheck = () => {
   else return agent;
 };
 
-// console.log(osCheck());
-// console.log(browserCheck());
+export const iosBrowser = () => {
+  const agent = navigator.userAgent.toLocaleLowerCase();
+
+  if (agent.indexOf("kakaotalk") >= 0) return "kakaotalk";
+  else if (agent.indexOf("naver") >= 0) return "naver";
+  else if (agent.indexOf("crios") >= 0) return "chrome";
+  else if (agent.indexOf("safari") >= 0) return "safari";
+  else if (agent.indexOf("opt") >= 0) return "opera";
+  else return agent;
+};
