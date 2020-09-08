@@ -40,6 +40,54 @@ section#forum-post {
     }
   }
 
+  .post-status {
+    @keyframes heart {
+      0% {
+        transform: scale(1);
+      }
+      35% {
+        transform: scale(0.7);
+      }
+      75% {
+        transform: scale(1.15);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    ul {
+      padding-top: 3rem;
+
+      li {
+        margin-right: 35px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.like {
+          span {
+            margin-right: 8px;
+          }
+        }
+
+        &.clipboard {
+        }
+
+        .count {
+          font-size: 1.15em;
+        }
+
+        .name {
+          padding-top: 5px;
+          font-size: 0.88em;
+          color: rgb(155, 154, 154);
+        }
+      }
+    }
+  }
+
   .replies-wrap {
   }
 

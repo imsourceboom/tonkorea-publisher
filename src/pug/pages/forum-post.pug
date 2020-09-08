@@ -1,5 +1,7 @@
 extends ../_layout
 include ../components/comingSoon
+include ../components/heart
+include ../components/link
 
 block main
     section#forum-post
@@ -71,10 +73,23 @@ block main
                             a(href="")
                                 img(src="/assets/images/symbols/file-icon.png", alt="")
                                 span 단어맞추기.hwp
+                .post-status
+                    ul.flex.justify-end
+                        li.like.flex.align-center
+                            span.count.comma 9999
+                            +heart()
+                        li.clipboard.flex.align-center
+                            +link()
+                        li.reply.text-center
+                            .count.comma 9999
+                            .name 댓글수
+                        li.view.text-center
+                            .count.comma 9999
+                            .name 조회수
                 .buttons
                     //- .alert 주소가 복사되었습니다.
                     //- input(type="hidden")#input-url
                     //- button.share.btn-copy 공유하기
                     button.list-view 목록보기
                 .replies-wrap
-                    
+                    .input-comment-wrap

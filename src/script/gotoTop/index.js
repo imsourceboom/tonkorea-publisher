@@ -5,7 +5,7 @@ button.setAttribute("href", "#body");
 
 button.style.cssText = `
     position: fixed;
-    bottom: 5vh;
+    bottom: 6vh;
     right: 5vw;
     z-index: 999999;
     display: none;
@@ -26,7 +26,6 @@ window.addEventListener(
   "scroll",
   throttling(() => {
     let pageY = window.pageYOffset;
-    console.log(pageY);
 
     if (pageY >= 55) {
       button.style.display = "block";

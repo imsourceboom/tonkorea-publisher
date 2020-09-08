@@ -12,7 +12,7 @@ import "./agentCheck";
 import "./ieCaution";
 import "./viewComma";
 import "./category";
-import "./contentsBox";
+import "./postBox";
 import "./gotoTop";
 // import "./telegramBtn";
 // import "./menu";
