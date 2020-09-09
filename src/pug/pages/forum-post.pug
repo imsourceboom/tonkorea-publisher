@@ -14,10 +14,10 @@ block main
                         li 카테고리
                 .profile
                     .info
-                        .logo
+                        .user-thumbnail
                             //- img(src="/assets/images/image/project/telegram.png", alt="")
                         .author
-                            .name imsexybomb
+                            .username imsexybomb
                             //- .date 2018년 11월 12일
                     //- a(href="").original-view 원문보기
                     .date 2018년 11월 12일
@@ -91,5 +91,81 @@ block main
                     //- input(type="hidden")#input-url
                     //- button.share.btn-copy 공유하기
                     button.list-view 목록보기
-                .replies-wrap
-                    .input-comment-wrap
+                .replies-container
+                    .write-component-wrap
+                        textarea(placeholder='댓글을 작성하세요').write-area
+                        .buttons-wrapper
+                            button.trigger-btn 댓글 작성
+                    .replies-bundles
+                        .wrap
+                            .comment-box
+                               .top
+                                    .profile
+                                        .user-thumbnail
+                                        .comment-info
+                                            .username UserName
+                                            time.date 2020-09-09
+                               .middle
+                                    p 댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.
+                               .bottom
+                                    .reply-handle-wrap
+                                        button.re-reply-toggle-btn(type='button')
+                                            span.arrow-down
+                                                svg(width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down")
+                                                    polyline(points="6 9 12 15 18 9")
+                                            span.arrow-up
+                                                svg(width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up")
+                                                    polyline(points="18 15 12 9 6 15")
+                                            span.count 2
+                                            span 개의 댓글&nbsp;
+                                            span.show 더보기
+                                            span.hide 숨기기
+                                        ul.reply-status
+                                            li
+                                                +heart()
+                                            li
+                                                +link()
+                                    .re-reply-comment-wrap
+                                        .comment-box
+                                            .top
+                                                .profile
+                                                    .user-thumbnail
+                                                    .comment-info
+                                                        .username UserName
+                                                        time.date 2020-09-09
+                                            .middle
+                                                p 댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.
+                                            .bottom
+                                                button.re-reply-toggle-btn(type='button')
+                                                    span.arrow-down
+                                                        svg(width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down")
+                                                            polyline(points="6 9 12 15 18 9")
+                                                    span.arrow-up
+                                                        svg(width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up")
+                                                            polyline(points="18 15 12 9 6 15")
+                                                    span.count 2
+                                                    span 개의 댓글&nbsp;
+                                                    span.show 더보기
+                                                    span.hide 숨기기
+                                        .comment-box
+                                            .top
+                                                .profile
+                                                    .user-thumbnail
+                                                    .comment-info
+                                                        .username UserName
+                                                        time.date 2020-09-09
+                                            .middle
+                                                p 댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.
+                                            .bottom
+                                                button.re-reply-toggle-btn(type='button')
+                                                    span.arrow-down
+                                                        svg(width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down")
+                                                            polyline(points="6 9 12 15 18 9")
+                                                    span.arrow-up
+                                                        svg(width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up")
+                                                            polyline(points="18 15 12 9 6 15")
+                                                    span.count 2
+                                                    span 개의 댓글&nbsp;
+                                                    span.show 더보기
+                                                    span.hide 숨기기
+                                                

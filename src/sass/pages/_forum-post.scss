@@ -5,6 +5,28 @@ section#forum-post {
     padding: 150px 0;
   }
 
+  .user-thumbnail {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    margin-right: 0.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+
+    @media (min-width: 768px) {
+      width: 38px;
+      height: 38px;
+      margin-right: 0.6em;
+    }
+  }
+
+  .username {
+    font-weight: bold;
+  }
+
   .title {
     ul.hash {
       li {
@@ -27,35 +49,9 @@ section#forum-post {
   }
 
   .profile {
-    .logo {
-      width: 30px;
-      height: 30px;
-      border-radius: 20px;
-      margin-right: 7px !important;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 20px;
-    }
   }
 
   .post-status {
-    @keyframes heart {
-      0% {
-        transform: scale(1);
-      }
-      35% {
-        transform: scale(0.7);
-      }
-      75% {
-        transform: scale(1.15);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-
     ul {
       padding-top: 3rem;
 
@@ -88,7 +84,165 @@ section#forum-post {
     }
   }
 
-  .replies-wrap {
+  .replies-container {
+    padding-top: 50px;
+
+    .write-component-wrap {
+      textarea.write-area {
+        resize: none;
+        margin-bottom: 1rem;
+        width: 100%;
+        min-height: 70px;
+        color: rgb(33, 37, 41);
+        line-height: 1.75;
+        font-size: 1rem;
+        padding: 1rem 1rem 1.5rem;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(233, 236, 239);
+        border-image: initial;
+        border-radius: 4px;
+      }
+
+      .buttons-wrapper {
+        display: flex;
+        justify-content: flex-end;
+
+        button.trigger-btn {
+          display: inline-flex;
+          -webkit-box-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          justify-content: center;
+          font-weight: bold;
+          cursor: pointer;
+          color: white;
+          padding-top: 0px;
+          padding-bottom: 0px;
+          height: 2rem;
+          padding-left: 1.25rem;
+          padding-right: 1.25rem;
+          font-size: 1rem;
+          outline: none;
+          border-width: initial;
+          border-style: none;
+          border-color: initial;
+          border-image: initial;
+          background: rgb(18, 184, 134);
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .replies-bundles {
+      margin-top: 2.5em;
+
+      .comment-box {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+
+        .re-reply-comment-wrap {
+          background-color: rgba(0, 0, 0, 0.016);
+          margin-top: 1.3125rem;
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgba(0, 0, 0, 0.02);
+          border-image: initial;
+          padding: 1.5rem;
+          border-radius: 4px;
+        }
+
+        .top {
+          margin-bottom: 1.5em;
+          display: flex;
+          -webkit-box-pack: justify;
+          justify-content: space-between;
+          -webkit-box-align: center;
+          align-items: center;
+
+          .profile {
+            display: flex;
+            align-items: center;
+            padding: 0;
+
+            .comment-info {
+              margin-left: 3px;
+              line-height: 1;
+
+              time.date {
+                display: block;
+                font-size: 0.85em;
+                color: rgb(134, 142, 150);
+                margin-top: 0.4em;
+              }
+            }
+          }
+        }
+
+        .middle {
+          color: rgb(34, 36, 38);
+          line-height: 1.7;
+          letter-spacing: -0.004em;
+          word-break: keep-all;
+          overflow-wrap: break-word;
+
+          @media (min-width: 768px) {
+            font-size: 1.05em;
+          }
+        }
+
+        .bottom {
+          margin-top: 2em;
+
+          .reply-handle-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button.re-reply-toggle-btn {
+              color: rgb(101, 132, 235);
+
+              &.active {
+                span.arrow-down,
+                span.show {
+                  display: none;
+                }
+                span.arrow-up,
+                span.hide {
+                  display: inline;
+                }
+              }
+
+              span.arrow-up,
+              span.hide {
+                display: none;
+              }
+
+              span.arrow-down,
+              span.arrow-up {
+                margin-right: 5px;
+
+                svg {
+                  margin-bottom: -2px;
+                }
+              }
+            }
+
+            ul.reply-status {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 768px) {
+      .write-component-wrap {
+        textarea.write-area {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
   }
 
   @media (min-width: 1024px) {

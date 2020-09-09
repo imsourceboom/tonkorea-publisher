@@ -11,13 +11,21 @@ function getRandomColor() {
 }
 
 if (contentsBox !== null) {
-  const logo = document.querySelector(".profile .info .logo");
-  const name = document.querySelector(".profile .info .author .name");
+  const userThumbnail = Array.from(
+    document.querySelectorAll(".user-thumbnail")
+  );
+  const userName = Array.from(document.querySelectorAll(".username"));
   const heartButtons = Array.from(document.querySelectorAll("button.heart"));
   const linkButton = document.querySelector("button.link");
 
-  logo.textContent = name.textContent.split("")[0].toUpperCase();
-  logo.style.backgroundColor = `${getRandomColor()}`;
+  userThumbnail.map((thumbnail, thumbnailIndex) => {
+    userName.map((name, nameIndex) => {
+      if (thumbnailIndex === nameIndex) {
+        thumbnail.textContent = name.textContent.split("")[0].toUpperCase();
+        thumbnail.style.backgroundColor = `${getRandomColor()}`;
+      }
+    });
+  });
 
   heartButtons.map((btn) => {
     btn.addEventListener("click", (e) => {

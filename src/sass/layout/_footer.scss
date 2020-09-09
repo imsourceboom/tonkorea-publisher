@@ -91,10 +91,6 @@ footer {
     align-items: center;
     justify-content: flex-end;
 
-    @media (min-width: 1680px) {
-      align-items: flex-start;
-    }
-
     .clause-and-admin {
       width: 100%;
       max-width: 274px;
@@ -110,6 +106,15 @@ footer {
     }
 
     p.copy-right {
+    }
+
+    @media (min-width: 768px) {
+      .clause-and-admin {
+        max-width: 292px;
+      }
+    }
+    @media (min-width: 1680px) {
+      align-items: flex-start;
     }
   }
 }

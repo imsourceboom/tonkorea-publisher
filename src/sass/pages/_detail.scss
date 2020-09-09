@@ -233,6 +233,9 @@ section#detail {
     .buttons {
       position: relative;
       padding-top: 2.25rem;
+      display: flex;
+
+      justify-content: flex-end;
 
       .alert {
         position: absolute;
@@ -265,7 +268,7 @@ section#detail {
       }
 
       .list-view {
-        float: right;
+        // float: right;
       }
     }
   }
@@ -294,14 +297,13 @@ section#detail {
       .buttons {
         padding-top: 2.75rem;
 
+        button,
         .alert {
           height: 37px;
           line-height: 37px;
         }
 
         button {
-          height: 37px;
-          line-height: 37px;
           padding: 0 16px;
         }
       }
