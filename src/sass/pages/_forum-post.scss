@@ -199,37 +199,37 @@ section#forum-post {
             justify-content: space-between;
             align-items: center;
 
-            button.re-reply-toggle-btn {
-              color: rgb(101, 132, 235);
+            ul.reply-status {
+              display: flex;
+            }
+          }
 
-              &.active {
-                span.arrow-down,
-                span.show {
-                  display: none;
-                }
-                span.arrow-up,
-                span.hide {
-                  display: inline;
-                }
-              }
+          button.re-reply-toggle-btn {
+            color: rgb(101, 132, 235);
 
-              span.arrow-up,
-              span.hide {
+            &.active {
+              span.arrow-down,
+              span.show {
                 display: none;
               }
-
-              span.arrow-down,
-              span.arrow-up {
-                margin-right: 5px;
-
-                svg {
-                  margin-bottom: -2px;
-                }
+              span.arrow-up,
+              span.hide {
+                display: inline;
               }
             }
 
-            ul.reply-status {
-              display: flex;
+            span.arrow-up,
+            span.hide {
+              display: none;
+            }
+
+            span.arrow-down,
+            span.arrow-up {
+              margin-right: 5px;
+
+              svg {
+                margin-bottom: -2px;
+              }
             }
           }
         }
