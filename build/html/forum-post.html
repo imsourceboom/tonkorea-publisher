@@ -165,22 +165,22 @@
                 </div>
               </div>
               <div class="replies-bundles">
-                <div class="wrap">
-                  <div class="comment-box">
-                    <div class="top">
-                      <div class="profile">
-                        <div class="user-thumbnail"></div>
-                        <div class="comment-info">
-                          <div class="username">UserName</div>
-                          <time class="date">2020-09-09</time>
-                        </div>
+                <div class="comment-box">
+                  <div class="top">
+                    <div class="profile">
+                      <div class="user-thumbnail"></div>
+                      <div class="comment-info">
+                        <div class="username">UserName</div>
+                        <time class="date">2020-09-09</time>
                       </div>
                     </div>
-                    <div class="middle">
-                      <p>댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.</p>
-                    </div>
-                    <div class="bottom">
-                      <div class="reply-handle-wrap">
+                  </div>
+                  <div class="middle">
+                    <p>댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.</p>
+                  </div>
+                  <div class="bottom">
+                    <div class="reply-handle-wrap">
+                      <div class="reply-and-count">
                         <button class="re-reply-toggle-btn" type="button"><span class="arrow-down">
                             <svg class="feather feather-chevron-down" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                               <polyline points="6 9 12 15 18 9"></polyline>
@@ -188,7 +188,10 @@
                             <svg class="feather feather-chevron-up" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                               <polyline points="18 15 12 9 6 15"></polyline>
                             </svg></span><span class="count">2</span><span>개의 댓글&nbsp;</span><span class="show">더보기</span><span class="hide">숨기기</span></button>
-                        <ul class="reply-status">
+                        <button class="re-reply-form-trigger">댓글</button>
+                      </div>
+                      <div class="reply-status-handle">
+                        <ul>
                           <li>
                             <button class="heart" type="button">
                               <svg class="feather feather-heart" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -205,52 +208,787 @@
                             </button>
                           </li>
                         </ul>
+                        <div class="self-comment-control">
+                          <button class="edit">
+                            <svg class="feather feather-edit" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                            </svg>
+                          </button>
+                          <button class="delete">
+                            <svg class="feather feather-trash-2" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#ff793f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="3 6 5 6 21 6"></polyline>
+                              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                              <line x1="10" y1="11" x2="10" y2="17"></line>
+                              <line x1="14" y1="11" x2="14" y2="17"></line>
+                            </svg>
+                          </button>
+                        </div>
                       </div>
-                      <div class="re-reply-comment-wrap">
-                        <div class="comment-box">
-                          <div class="top">
-                            <div class="profile">
-                              <div class="user-thumbnail"></div>
-                              <div class="comment-info">
-                                <div class="username">UserName</div>
-                                <time class="date">2020-09-09</time>
-                              </div>
+                    </div>
+                    <div class="write-component-wrap">
+                      <textarea class="write-area" placeholder="댓글을 작성하세요"></textarea>
+                      <div class="buttons-wrapper">
+                        <button class="cancel-btn">취소</button>
+                        <button class="trigger-btn">댓글 작성</button>
+                      </div>
+                    </div>
+                    <div class="re-reply-comment-wrap">
+                      <div class="comment-box">
+                        <div class="top">
+                          <div class="profile">
+                            <div class="user-thumbnail"></div>
+                            <div class="comment-info">
+                              <div class="username">UserName</div>
+                              <time class="date">2020-09-09</time>
                             </div>
-                          </div>
-                          <div class="middle">
-                            <p>댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.</p>
-                          </div>
-                          <div class="bottom">
-                            <button class="re-reply-toggle-btn" type="button"><span class="arrow-down">
-                                <svg class="feather feather-chevron-down" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                  <polyline points="6 9 12 15 18 9"></polyline>
-                                </svg></span><span class="arrow-up">
-                                <svg class="feather feather-chevron-up" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                  <polyline points="18 15 12 9 6 15"></polyline>
-                                </svg></span><span class="count">2</span><span>개의 댓글&nbsp;</span><span class="show">더보기</span><span class="hide">숨기기</span></button>
                           </div>
                         </div>
-                        <div class="comment-box">
-                          <div class="top">
-                            <div class="profile">
-                              <div class="user-thumbnail"></div>
-                              <div class="comment-info">
-                                <div class="username">UserName</div>
-                                <time class="date">2020-09-09</time>
-                              </div>
+                        <div class="middle">
+                          <p>댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.</p>
+                        </div>
+                        <div class="bottom">
+                          <div class="reply-handle-wrap">
+                            <div class="reply-and-count">
+                              <button class="re-reply-form-trigger">댓글</button>
+                            </div>
+                            <div class="reply-status-handle">
+                              <ul>
+                                <li>
+                                  <button class="heart" type="button">
+                                    <svg class="feather feather-heart" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="link" type="button">
+                                    <svg class="feather feather-link" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                              </ul>
                             </div>
                           </div>
-                          <div class="middle">
-                            <p>댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.</p>
+                          <div class="write-component-wrap">
+                            <textarea class="write-area" placeholder="댓글을 작성하세요"></textarea>
+                            <div class="buttons-wrapper">
+                              <button class="cancel-btn">취소</button>
+                              <button class="trigger-btn">댓글 작성</button>
+                            </div>
                           </div>
-                          <div class="bottom">
-                            <button class="re-reply-toggle-btn" type="button"><span class="arrow-down">
-                                <svg class="feather feather-chevron-down" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                  <polyline points="6 9 12 15 18 9"></polyline>
-                                </svg></span><span class="arrow-up">
-                                <svg class="feather feather-chevron-up" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                  <polyline points="18 15 12 9 6 15"></polyline>
-                                </svg></span><span class="count">2</span><span>개의 댓글&nbsp;</span><span class="show">더보기</span><span class="hide">숨기기</span></button>
+                        </div>
+                      </div>
+                      <div class="comment-box">
+                        <div class="top">
+                          <div class="profile">
+                            <div class="user-thumbnail"></div>
+                            <div class="comment-info">
+                              <div class="username">UserName</div>
+                              <time class="date">2020-09-09</time>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="middle">
+                          <p>댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.</p>
+                        </div>
+                        <div class="bottom">
+                          <div class="reply-handle-wrap">
+                            <div class="reply-and-count">
+                              <button class="re-reply-form-trigger">댓글</button>
+                            </div>
+                            <div class="reply-status-handle">
+                              <ul>
+                                <li>
+                                  <button class="heart" type="button">
+                                    <svg class="feather feather-heart" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="link" type="button">
+                                    <svg class="feather feather-link" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="write-component-wrap">
+                            <textarea class="write-area" placeholder="댓글을 작성하세요"></textarea>
+                            <div class="buttons-wrapper">
+                              <button class="cancel-btn">취소</button>
+                              <button class="trigger-btn">댓글 작성</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-box">
+                  <div class="top">
+                    <div class="profile">
+                      <div class="user-thumbnail"></div>
+                      <div class="comment-info">
+                        <div class="username">UserName</div>
+                        <time class="date">2020-09-09</time>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="middle">
+                    <p>댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.</p>
+                  </div>
+                  <div class="bottom">
+                    <div class="reply-handle-wrap">
+                      <div class="reply-and-count">
+                        <button class="re-reply-toggle-btn" type="button"><span class="arrow-down">
+                            <svg class="feather feather-chevron-down" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></span><span class="arrow-up">
+                            <svg class="feather feather-chevron-up" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg></span><span class="count">2</span><span>개의 댓글&nbsp;</span><span class="show">더보기</span><span class="hide">숨기기</span></button>
+                        <button class="re-reply-form-trigger">댓글</button>
+                      </div>
+                      <div class="reply-status-handle">
+                        <ul>
+                          <li>
+                            <button class="heart" type="button">
+                              <svg class="feather feather-heart" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                              </svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button class="link" type="button">
+                              <svg class="feather feather-link" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                              </svg>
+                            </button>
+                          </li>
+                        </ul>
+                        <div class="self-comment-control">
+                          <button class="edit">
+                            <svg class="feather feather-edit" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                            </svg>
+                          </button>
+                          <button class="delete">
+                            <svg class="feather feather-trash-2" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#ff793f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="3 6 5 6 21 6"></polyline>
+                              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                              <line x1="10" y1="11" x2="10" y2="17"></line>
+                              <line x1="14" y1="11" x2="14" y2="17"></line>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="write-component-wrap">
+                      <textarea class="write-area" placeholder="댓글을 작성하세요"></textarea>
+                      <div class="buttons-wrapper">
+                        <button class="cancel-btn">취소</button>
+                        <button class="trigger-btn">댓글 작성</button>
+                      </div>
+                    </div>
+                    <div class="re-reply-comment-wrap">
+                      <div class="comment-box">
+                        <div class="top">
+                          <div class="profile">
+                            <div class="user-thumbnail"></div>
+                            <div class="comment-info">
+                              <div class="username">UserName</div>
+                              <time class="date">2020-09-09</time>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="middle">
+                          <p>댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.</p>
+                        </div>
+                        <div class="bottom">
+                          <div class="reply-handle-wrap">
+                            <div class="reply-and-count">
+                              <button class="re-reply-form-trigger">댓글</button>
+                            </div>
+                            <div class="reply-status-handle">
+                              <ul>
+                                <li>
+                                  <button class="heart" type="button">
+                                    <svg class="feather feather-heart" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="link" type="button">
+                                    <svg class="feather feather-link" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="write-component-wrap">
+                            <textarea class="write-area" placeholder="댓글을 작성하세요"></textarea>
+                            <div class="buttons-wrapper">
+                              <button class="cancel-btn">취소</button>
+                              <button class="trigger-btn">댓글 작성</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="comment-box">
+                        <div class="top">
+                          <div class="profile">
+                            <div class="user-thumbnail"></div>
+                            <div class="comment-info">
+                              <div class="username">UserName</div>
+                              <time class="date">2020-09-09</time>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="middle">
+                          <p>댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.</p>
+                        </div>
+                        <div class="bottom">
+                          <div class="reply-handle-wrap">
+                            <div class="reply-and-count">
+                              <button class="re-reply-form-trigger">댓글</button>
+                            </div>
+                            <div class="reply-status-handle">
+                              <ul>
+                                <li>
+                                  <button class="heart" type="button">
+                                    <svg class="feather feather-heart" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="link" type="button">
+                                    <svg class="feather feather-link" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="write-component-wrap">
+                            <textarea class="write-area" placeholder="댓글을 작성하세요"></textarea>
+                            <div class="buttons-wrapper">
+                              <button class="cancel-btn">취소</button>
+                              <button class="trigger-btn">댓글 작성</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-box">
+                  <div class="top">
+                    <div class="profile">
+                      <div class="user-thumbnail"></div>
+                      <div class="comment-info">
+                        <div class="username">UserName</div>
+                        <time class="date">2020-09-09</time>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="middle">
+                    <p>댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.</p>
+                  </div>
+                  <div class="bottom">
+                    <div class="reply-handle-wrap">
+                      <div class="reply-and-count">
+                        <button class="re-reply-toggle-btn" type="button"><span class="arrow-down">
+                            <svg class="feather feather-chevron-down" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></span><span class="arrow-up">
+                            <svg class="feather feather-chevron-up" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg></span><span class="count">2</span><span>개의 댓글&nbsp;</span><span class="show">더보기</span><span class="hide">숨기기</span></button>
+                        <button class="re-reply-form-trigger">댓글</button>
+                      </div>
+                      <div class="reply-status-handle">
+                        <ul>
+                          <li>
+                            <button class="heart" type="button">
+                              <svg class="feather feather-heart" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                              </svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button class="link" type="button">
+                              <svg class="feather feather-link" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                              </svg>
+                            </button>
+                          </li>
+                        </ul>
+                        <div class="self-comment-control">
+                          <button class="edit">
+                            <svg class="feather feather-edit" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                            </svg>
+                          </button>
+                          <button class="delete">
+                            <svg class="feather feather-trash-2" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#ff793f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="3 6 5 6 21 6"></polyline>
+                              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                              <line x1="10" y1="11" x2="10" y2="17"></line>
+                              <line x1="14" y1="11" x2="14" y2="17"></line>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="write-component-wrap">
+                      <textarea class="write-area" placeholder="댓글을 작성하세요"></textarea>
+                      <div class="buttons-wrapper">
+                        <button class="cancel-btn">취소</button>
+                        <button class="trigger-btn">댓글 작성</button>
+                      </div>
+                    </div>
+                    <div class="re-reply-comment-wrap">
+                      <div class="comment-box">
+                        <div class="top">
+                          <div class="profile">
+                            <div class="user-thumbnail"></div>
+                            <div class="comment-info">
+                              <div class="username">UserName</div>
+                              <time class="date">2020-09-09</time>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="middle">
+                          <p>댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.</p>
+                        </div>
+                        <div class="bottom">
+                          <div class="reply-handle-wrap">
+                            <div class="reply-and-count">
+                              <button class="re-reply-form-trigger">댓글</button>
+                            </div>
+                            <div class="reply-status-handle">
+                              <ul>
+                                <li>
+                                  <button class="heart" type="button">
+                                    <svg class="feather feather-heart" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="link" type="button">
+                                    <svg class="feather feather-link" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="write-component-wrap">
+                            <textarea class="write-area" placeholder="댓글을 작성하세요"></textarea>
+                            <div class="buttons-wrapper">
+                              <button class="cancel-btn">취소</button>
+                              <button class="trigger-btn">댓글 작성</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="comment-box">
+                        <div class="top">
+                          <div class="profile">
+                            <div class="user-thumbnail"></div>
+                            <div class="comment-info">
+                              <div class="username">UserName</div>
+                              <time class="date">2020-09-09</time>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="middle">
+                          <p>댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.</p>
+                        </div>
+                        <div class="bottom">
+                          <div class="reply-handle-wrap">
+                            <div class="reply-and-count">
+                              <button class="re-reply-form-trigger">댓글</button>
+                            </div>
+                            <div class="reply-status-handle">
+                              <ul>
+                                <li>
+                                  <button class="heart" type="button">
+                                    <svg class="feather feather-heart" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="link" type="button">
+                                    <svg class="feather feather-link" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="write-component-wrap">
+                            <textarea class="write-area" placeholder="댓글을 작성하세요"></textarea>
+                            <div class="buttons-wrapper">
+                              <button class="cancel-btn">취소</button>
+                              <button class="trigger-btn">댓글 작성</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-box">
+                  <div class="top">
+                    <div class="profile">
+                      <div class="user-thumbnail"></div>
+                      <div class="comment-info">
+                        <div class="username">UserName</div>
+                        <time class="date">2020-09-09</time>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="middle">
+                    <p>댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.</p>
+                  </div>
+                  <div class="bottom">
+                    <div class="reply-handle-wrap">
+                      <div class="reply-and-count">
+                        <button class="re-reply-toggle-btn" type="button"><span class="arrow-down">
+                            <svg class="feather feather-chevron-down" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></span><span class="arrow-up">
+                            <svg class="feather feather-chevron-up" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg></span><span class="count">2</span><span>개의 댓글&nbsp;</span><span class="show">더보기</span><span class="hide">숨기기</span></button>
+                        <button class="re-reply-form-trigger">댓글</button>
+                      </div>
+                      <div class="reply-status-handle">
+                        <ul>
+                          <li>
+                            <button class="heart" type="button">
+                              <svg class="feather feather-heart" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                              </svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button class="link" type="button">
+                              <svg class="feather feather-link" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                              </svg>
+                            </button>
+                          </li>
+                        </ul>
+                        <div class="self-comment-control">
+                          <button class="edit">
+                            <svg class="feather feather-edit" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                            </svg>
+                          </button>
+                          <button class="delete">
+                            <svg class="feather feather-trash-2" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#ff793f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="3 6 5 6 21 6"></polyline>
+                              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                              <line x1="10" y1="11" x2="10" y2="17"></line>
+                              <line x1="14" y1="11" x2="14" y2="17"></line>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="write-component-wrap">
+                      <textarea class="write-area" placeholder="댓글을 작성하세요"></textarea>
+                      <div class="buttons-wrapper">
+                        <button class="cancel-btn">취소</button>
+                        <button class="trigger-btn">댓글 작성</button>
+                      </div>
+                    </div>
+                    <div class="re-reply-comment-wrap">
+                      <div class="comment-box">
+                        <div class="top">
+                          <div class="profile">
+                            <div class="user-thumbnail"></div>
+                            <div class="comment-info">
+                              <div class="username">UserName</div>
+                              <time class="date">2020-09-09</time>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="middle">
+                          <p>댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.</p>
+                        </div>
+                        <div class="bottom">
+                          <div class="reply-handle-wrap">
+                            <div class="reply-and-count">
+                              <button class="re-reply-form-trigger">댓글</button>
+                            </div>
+                            <div class="reply-status-handle">
+                              <ul>
+                                <li>
+                                  <button class="heart" type="button">
+                                    <svg class="feather feather-heart" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="link" type="button">
+                                    <svg class="feather feather-link" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="write-component-wrap">
+                            <textarea class="write-area" placeholder="댓글을 작성하세요"></textarea>
+                            <div class="buttons-wrapper">
+                              <button class="cancel-btn">취소</button>
+                              <button class="trigger-btn">댓글 작성</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="comment-box">
+                        <div class="top">
+                          <div class="profile">
+                            <div class="user-thumbnail"></div>
+                            <div class="comment-info">
+                              <div class="username">UserName</div>
+                              <time class="date">2020-09-09</time>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="middle">
+                          <p>댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.</p>
+                        </div>
+                        <div class="bottom">
+                          <div class="reply-handle-wrap">
+                            <div class="reply-and-count">
+                              <button class="re-reply-form-trigger">댓글</button>
+                            </div>
+                            <div class="reply-status-handle">
+                              <ul>
+                                <li>
+                                  <button class="heart" type="button">
+                                    <svg class="feather feather-heart" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="link" type="button">
+                                    <svg class="feather feather-link" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="write-component-wrap">
+                            <textarea class="write-area" placeholder="댓글을 작성하세요"></textarea>
+                            <div class="buttons-wrapper">
+                              <button class="cancel-btn">취소</button>
+                              <button class="trigger-btn">댓글 작성</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-box">
+                  <div class="top">
+                    <div class="profile">
+                      <div class="user-thumbnail"></div>
+                      <div class="comment-info">
+                        <div class="username">UserName</div>
+                        <time class="date">2020-09-09</time>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="middle">
+                    <p>댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.</p>
+                  </div>
+                  <div class="bottom">
+                    <div class="reply-handle-wrap">
+                      <div class="reply-and-count">
+                        <button class="re-reply-toggle-btn" type="button"><span class="arrow-down">
+                            <svg class="feather feather-chevron-down" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></span><span class="arrow-up">
+                            <svg class="feather feather-chevron-up" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg></span><span class="count">2</span><span>개의 댓글&nbsp;</span><span class="show">더보기</span><span class="hide">숨기기</span></button>
+                        <button class="re-reply-form-trigger">댓글</button>
+                      </div>
+                      <div class="reply-status-handle">
+                        <ul>
+                          <li>
+                            <button class="heart" type="button">
+                              <svg class="feather feather-heart" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                              </svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button class="link" type="button">
+                              <svg class="feather feather-link" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                              </svg>
+                            </button>
+                          </li>
+                        </ul>
+                        <div class="self-comment-control">
+                          <button class="edit">
+                            <svg class="feather feather-edit" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                            </svg>
+                          </button>
+                          <button class="delete">
+                            <svg class="feather feather-trash-2" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#ff793f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="3 6 5 6 21 6"></polyline>
+                              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                              <line x1="10" y1="11" x2="10" y2="17"></line>
+                              <line x1="14" y1="11" x2="14" y2="17"></line>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="write-component-wrap">
+                      <textarea class="write-area" placeholder="댓글을 작성하세요"></textarea>
+                      <div class="buttons-wrapper">
+                        <button class="cancel-btn">취소</button>
+                        <button class="trigger-btn">댓글 작성</button>
+                      </div>
+                    </div>
+                    <div class="re-reply-comment-wrap">
+                      <div class="comment-box">
+                        <div class="top">
+                          <div class="profile">
+                            <div class="user-thumbnail"></div>
+                            <div class="comment-info">
+                              <div class="username">UserName</div>
+                              <time class="date">2020-09-09</time>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="middle">
+                          <p>댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.</p>
+                        </div>
+                        <div class="bottom">
+                          <div class="reply-handle-wrap">
+                            <div class="reply-and-count">
+                              <button class="re-reply-form-trigger">댓글</button>
+                            </div>
+                            <div class="reply-status-handle">
+                              <ul>
+                                <li>
+                                  <button class="heart" type="button">
+                                    <svg class="feather feather-heart" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="link" type="button">
+                                    <svg class="feather feather-link" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="write-component-wrap">
+                            <textarea class="write-area" placeholder="댓글을 작성하세요"></textarea>
+                            <div class="buttons-wrapper">
+                              <button class="cancel-btn">취소</button>
+                              <button class="trigger-btn">댓글 작성</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="comment-box">
+                        <div class="top">
+                          <div class="profile">
+                            <div class="user-thumbnail"></div>
+                            <div class="comment-info">
+                              <div class="username">UserName</div>
+                              <time class="date">2020-09-09</time>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="middle">
+                          <p>댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.</p>
+                        </div>
+                        <div class="bottom">
+                          <div class="reply-handle-wrap">
+                            <div class="reply-and-count">
+                              <button class="re-reply-form-trigger">댓글</button>
+                            </div>
+                            <div class="reply-status-handle">
+                              <ul>
+                                <li>
+                                  <button class="heart" type="button">
+                                    <svg class="feather feather-heart" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="link" type="button">
+                                    <svg class="feather feather-link" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                    </svg>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="write-component-wrap">
+                            <textarea class="write-area" placeholder="댓글을 작성하세요"></textarea>
+                            <div class="buttons-wrapper">
+                              <button class="cancel-btn">취소</button>
+                              <button class="trigger-btn">댓글 작성</button>
+                            </div>
                           </div>
                         </div>
                       </div>

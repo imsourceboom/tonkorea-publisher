@@ -97,7 +97,8 @@ block main
                         .buttons-wrapper
                             button.trigger-btn 댓글 작성
                     .replies-bundles
-                        .wrap
+                        //- .wrap
+                        - for (var i = 0; i < 5; i++)
                             .comment-box
                                .top
                                     .profile
@@ -109,22 +110,42 @@ block main
                                     p 댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.
                                .bottom
                                     .reply-handle-wrap
-                                        button.re-reply-toggle-btn(type='button')
-                                            span.arrow-down
-                                                svg(width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down")
-                                                    polyline(points="6 9 12 15 18 9")
-                                            span.arrow-up
-                                                svg(width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up")
-                                                    polyline(points="18 15 12 9 6 15")
-                                            span.count 2
-                                            span 개의 댓글&nbsp;
-                                            span.show 더보기
-                                            span.hide 숨기기
-                                        ul.reply-status
-                                            li
-                                                +heart()
-                                            li
-                                                +link()
+                                        .reply-and-count
+                                            button.re-reply-toggle-btn(type='button')
+                                                span.arrow-down
+                                                    svg(width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down")
+                                                        polyline(points="6 9 12 15 18 9")
+                                                span.arrow-up
+                                                    svg(width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up")
+                                                        polyline(points="18 15 12 9 6 15")
+                                                span.count 2
+                                                span 개의 댓글&nbsp;
+                                                span.show 더보기
+                                                span.hide 숨기기
+                                            button.re-reply-form-trigger 댓글
+                                        .reply-status-handle
+                                            ul
+                                                li
+                                                    +heart()
+                                                li
+                                                    +link()
+                                            .self-comment-control
+                                                button.edit
+                                                    svg(width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit")
+                                                        path(d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7")
+                                                        path(d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z")
+                                                button.delete
+                                                    svg(width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#ff793f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2")
+                                                        polyline(points="3 6 5 6 21 6")
+                                                        path(d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2")
+                                                        line(x1="10" y1="11" x2="10" y2="17")
+                                                        line(x1="14" y1="11" x2="14" y2="17")
+                                    
+                                    .write-component-wrap
+                                        textarea(placeholder='댓글을 작성하세요').write-area
+                                        .buttons-wrapper
+                                            button.cancel-btn 취소
+                                            button.trigger-btn 댓글 작성
                                     .re-reply-comment-wrap
                                         .comment-box
                                             .top
@@ -136,17 +157,20 @@ block main
                                             .middle
                                                 p 댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.
                                             .bottom
-                                                button.re-reply-toggle-btn(type='button')
-                                                    span.arrow-down
-                                                        svg(width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down")
-                                                            polyline(points="6 9 12 15 18 9")
-                                                    span.arrow-up
-                                                        svg(width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up")
-                                                            polyline(points="18 15 12 9 6 15")
-                                                    span.count 2
-                                                    span 개의 댓글&nbsp;
-                                                    span.show 더보기
-                                                    span.hide 숨기기
+                                                .reply-handle-wrap
+                                                    .reply-and-count
+                                                        button.re-reply-form-trigger 댓글
+                                                    .reply-status-handle
+                                                        ul
+                                                            li
+                                                                +heart()
+                                                            li
+                                                                +link()
+                                                .write-component-wrap
+                                                    textarea(placeholder='댓글을 작성하세요').write-area
+                                                    .buttons-wrapper
+                                                        button.cancel-btn 취소
+                                                        button.trigger-btn 댓글 작성
                                         .comment-box
                                             .top
                                                 .profile
@@ -157,15 +181,17 @@ block main
                                             .middle
                                                 p 댓글을 남겨주셔서 감사합니다. 댓글 단어의 길이를 테스트합니다. 길이가 영역을 넘어설 때 어떻게 보이는지 테스트합니다.
                                             .bottom
-                                                button.re-reply-toggle-btn(type='button')
-                                                    span.arrow-down
-                                                        svg(width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down")
-                                                            polyline(points="6 9 12 15 18 9")
-                                                    span.arrow-up
-                                                        svg(width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(101,132,235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up")
-                                                            polyline(points="18 15 12 9 6 15")
-                                                    span.count 2
-                                                    span 개의 댓글&nbsp;
-                                                    span.show 더보기
-                                                    span.hide 숨기기
-                                                
+                                                .reply-handle-wrap
+                                                    .reply-and-count
+                                                        button.re-reply-form-trigger 댓글
+                                                    .reply-status-handle
+                                                        ul
+                                                            li
+                                                                +heart()
+                                                            li
+                                                                +link()
+                                                .write-component-wrap
+                                                    textarea(placeholder='댓글을 작성하세요').write-area
+                                                    .buttons-wrapper
+                                                        button.cancel-btn 취소
+                                                        button.trigger-btn 댓글 작성
