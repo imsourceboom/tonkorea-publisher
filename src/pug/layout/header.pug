@@ -51,6 +51,9 @@ header
                         if m.name == menus[0].name
                             li(class=`active`)
                                 a(href="/index.html")= m.name
+                        else if m.name == '토론'
+                            li
+                                a(href=`https://forum.tonkorea.org` target="_blank" rel="noreferrer noopener")= m.name
                         else
                             li
                                 a(href=`/html/${m.path}.html`)= m.name
