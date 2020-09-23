@@ -17,12 +17,12 @@
             path: 'members'
         }, 
         {
-            name: '토론',
-            path: 'forum'
+            name: '포럼',
+            path: ''
         }, 
         {
-            name: '커뮤니티',
-            path: 'community'
+            name: '거버넌스',
+            path: ''
         }, 
         {
             name: '뉴스', 
@@ -49,6 +49,10 @@ footer
                 li
                     p
                         a(href=`https://forum.tonkorea.org` target="_blank" rel="noreferrer noopener")= m.name
+            else if m.name == '거버넌스'
+                li
+                    p
+                        a(href=`https://korea.gov.freeton.org` target="_blank" rel="noreferrer noopener")= m.name
             else
                 li
                     p
