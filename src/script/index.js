@@ -14,6 +14,7 @@ import "./viewComma";
 import "./category";
 import "./postBox";
 import "./gotoTop";
+import "./formSection";
 // import "./telegramBtn";
 // import "./menu";
 

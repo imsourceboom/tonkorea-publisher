@@ -1,0 +1,58 @@
+extends ../_layout
+
+block main
+    section#form
+        .header
+            a(href="/html/members.html").close
+                
+        .wrapper
+            form(action="")
+                hgroup
+                    h1 탈중앙화 선언문 서명
+                    p 탈중앙화 선언문에 서명함으로 프리톤 블록체인의 완전하고 최종적인 탈중앙화를 위해 활동할 것을 서약한다.
+                    .required * 필수항목
+                    .caution - 비로그인 제출 시 수정할 수 없습니다.
+                // 에러가 있을 시 inpu-group 클래스에 caution 클래스를 붙인다.
+                .input-group.caution
+                    .box
+                        .title.required 이름
+                        input(type="text" placeholder="이름" maxlength='15' required)
+                    .warning 경고입니다.
+                    .alert
+                .input-group
+                    .box
+                        .title.required 거주지
+                        label(for="is-usa").comment 나는 미국 시민 및 거주자나 미국 회사의 대리인 및 대표자가 아니다
+                            input(type="checkbox" id="is-usa" required hidden value='Y')
+                    .warning 경고입니다.
+                .input-group
+                    .box
+                        .title.required 텔레그램 ID
+                        input(type="text" placeholder="텔레그램 ID" maxlength='30' required)
+                    .warning 경고입니다.
+                    .alert
+                .input-group
+                    .box
+                        .title.required 프리톤에 흥미를 가지시는 이유는 무엇인가요?
+                        input(type="text" placeholder="프리톤에 흥미를 가지시는 이유는 무엇인가요?" maxlength='150' required)
+                    .warning 경고입니다.
+                    .alert
+                .input-group
+                    .box
+                        .title.required 프리톤을 한 문장으로 묘사해 주세요
+                        input(type="text" placeholder="프리톤을 한 문장으로 묘사해 주세요"  maxlength='150' required)
+                    .warning 경고입니다.
+                    .alert
+                .input-group
+                    .box
+                        .title.required 구체적으로 프리톤의 완전한 탈중앙화를 위해 어떤 일들을 하기 원하시나요?
+                        input(type="text" placeholder="구체적으로 프리톤의 완전한 탈중앙화를 위해 어떤 일들을 하기 원하시나요?"  maxlength='150' required)
+                    .warning 경고입니다.
+                    .alert
+                .input-group
+                    .box
+                        .title 건의사항
+                        input(type="text" placeholder="건의사항" maxlength='150')
+                    .warning 경고입니다.
+                    .alert
+                input(type='submit' value="제출" disabled)
