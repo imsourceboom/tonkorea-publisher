@@ -66,10 +66,18 @@ if (formSection !== null) {
     input.addEventListener("keyup", (e) => {
       valueCheck();
 
+      if (index === 0) {
+        input.value = input.value.replace(
+          /[^ㄱ-ㅎ|ㅏ-ㅣ|가-힣a-zA-Z\s}]+$/,
+          ""
+        );
+      }
+
       if (index === 1) {
         // 영문 소대문자와 숫자만 허용
         input.value = input.value.replace(/[^a-zA-Z0-9+]*$/, "");
         let arr = input.value.split("");
+
         if (arr[0] !== "@") {
           arr.unshift("@");
           input.value = arr.join("");
