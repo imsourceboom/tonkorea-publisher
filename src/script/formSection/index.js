@@ -66,16 +66,24 @@ if (formSection !== null) {
     input.addEventListener("keyup", (e) => {
       valueCheck();
 
-      // if (index === 1) {
-      //   let arr = input.value.split("");
-      //   console.log(arr[0]);
-      //   if (arr[0] !== "@") {
-      //     arr.unshift("@");
-      //     console.log(arr);
-      //     input.value = arr.concat();
-      //   }
-      // }
+      if (index === 1) {
+        // 영문 소대문자와 숫자만 허용
+        input.value = input.value.replace(/[^a-zA-Z0-9+]*$/, "");
+        let arr = input.value.split("");
+        if (arr[0] !== "@") {
+          arr.unshift("@");
+          input.value = arr.join("");
+        }
+      }
     });
+
+    if (index === 1) {
+      input.addEventListener("focusout", () => {
+        if (input.value == "@") {
+          input.value = "";
+        }
+      });
+    }
   });
 
   textInputs.map((input) => {
