@@ -44,6 +44,8 @@ if (formSection !== null) {
     }
   };
 
+  valueCheck();
+
   const lengthCheck = (input) => {
     input = input.target;
     const groupBox = input.parentElement.parentElement;

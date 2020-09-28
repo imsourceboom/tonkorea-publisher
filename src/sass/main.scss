@@ -9,8 +9,6 @@
   "pages/clause", "pages/detail", "pages/community", "pages/forum",
   "pages/forum-post", "pages/form";
 
-@import "admin/pages/board";
-
 @import "components/language-select", "components/coming-soon",
   "components/input-box", "components/radio-button", "components/select-box",
   "components/textarea", "components/check-box", "components/clause-box",
@@ -20,5 +18,7 @@
   "components/heart", "components/link";
 
 @import "admin/layout/main";
+
+@import "admin/pages/board", "admin/pages/membership";
 
 @import "admin/style/table_basic";
